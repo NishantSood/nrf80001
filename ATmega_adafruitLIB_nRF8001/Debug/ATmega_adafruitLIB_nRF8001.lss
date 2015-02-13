@@ -1,0 +1,3149 @@
+
+ATmega_adafruitLIB_nRF8001.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00800100  00001044  000010d8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001044  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000367  0080010a  0080010a  000010e2  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000010e2  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000004d0  00000000  00000000  00001112  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00008fb0  00000000  00000000  000015e2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00001395  00000000  00000000  0000a592  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00001635  00000000  00000000  0000b927  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000bd0  00000000  00000000  0000cf5c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00004139  00000000  00000000  0000db2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00003d65  00000000  00000000  00011c65  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000004a8  00000000  00000000  000159ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 ad 01 	jmp	0x35a	; 0x35a <__ctors_end>
+       4:	0c 94 77 06 	jmp	0xcee	; 0xcee <__vector_1>
+       8:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+       c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      10:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      14:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      18:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      1c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      20:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      24:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      28:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      2c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      30:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      34:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      38:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      3c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      40:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      44:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      48:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      4c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      50:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      54:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      58:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      5c:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      60:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      64:	0c 94 d5 01 	jmp	0x3aa	; 0x3aa <__bad_interrupt>
+      68:	46 02       	muls	r20, r22
+      6a:	d7 02       	muls	r29, r23
+      6c:	d7 02       	muls	r29, r23
+      6e:	65 02       	muls	r22, r21
+      70:	77 02       	muls	r23, r23
+      72:	91 02       	muls	r25, r17
+      74:	d7 02       	muls	r29, r23
+      76:	84 02       	muls	r24, r20
+      78:	d7 02       	muls	r29, r23
+      7a:	c4 02       	muls	r28, r20
+      7c:	d7 02       	muls	r29, r23
+      7e:	3b 02       	muls	r19, r27
+      80:	cc 02       	muls	r28, r28
+
+00000082 <__trampolines_end>:
+      82:	00 07       	cpc	r16, r16
+      84:	06 00       	.word	0x0006	; ????
+      86:	00 03       	mulsu	r16, r16
+      88:	02 41       	sbci	r16, 0x12	; 18
+      8a:	fe 00       	.word	0x00fe	; ????
+	...
+      a4:	1f 06       	cpc	r1, r31
+      a6:	10 00       	.word	0x0010	; ????
+      a8:	00 00       	nop
+      aa:	00 00       	nop
+      ac:	00 00       	nop
+      ae:	03 00       	.word	0x0003	; ????
+      b0:	03 01       	movw	r0, r6
+      b2:	01 00       	.word	0x0001	; ????
+      b4:	00 07       	cpc	r16, r16
+      b6:	00 00       	nop
+      b8:	90 00       	.word	0x0090	; ????
+	...
+      c2:	00 00       	nop
+      c4:	00 1f       	adc	r16, r16
+      c6:	06 10       	cpse	r0, r6
+      c8:	1c 01       	movw	r2, r24
+      ca:	02 00       	.word	0x0002	; ????
+	...
+      dc:	14 00       	.word	0x0014	; ????
+      de:	00 00       	nop
+      e0:	14 03       	mulsu	r17, r20
+      e2:	90 01       	movw	r18, r0
+      e4:	ff 00       	.word	0x00ff	; ????
+      e6:	1f 06       	cpc	r1, r31
+      e8:	10 38       	cpi	r17, 0x80	; 128
+      ea:	ff ff       	.word	0xffff	; ????
+      ec:	02 58       	subi	r16, 0x82	; 130
+      ee:	00 05       	cpc	r16, r0
+	...
+     104:	00 00       	nop
+     106:	00 05       	cpc	r16, r0
+     108:	06 10       	cpse	r0, r6
+     10a:	54 00       	.word	0x0054	; ????
+	...
+     128:	1f 06       	cpc	r1, r31
+     12a:	20 00       	.word	0x0020	; ????
+     12c:	04 04       	cpc	r0, r4
+     12e:	02 02       	muls	r16, r18
+     130:	00 01       	movw	r0, r0
+     132:	28 00       	.word	0x0028	; ????
+     134:	01 00       	.word	0x0001	; ????
+     136:	18 04       	cpc	r1, r8
+     138:	04 05       	cpc	r16, r4
+     13a:	05 00       	.word	0x0005	; ????
+     13c:	02 28       	or	r0, r2
+     13e:	03 01       	movw	r0, r6
+     140:	02 03       	mulsu	r16, r18
+     142:	00 00       	nop
+     144:	2a 04       	cpc	r2, r10
+     146:	04 14       	cp	r0, r4
+     148:	00 1f       	adc	r16, r16
+     14a:	06 20       	and	r0, r6
+     14c:	1c 06       	cpc	r1, r28
+     14e:	00 03       	mulsu	r16, r16
+     150:	2a 00       	.word	0x002a	; ????
+     152:	01 53       	subi	r16, 0x31	; 49
+     154:	74 65       	ori	r23, 0x54	; 84
+     156:	6c 6c       	ori	r22, 0xCC	; 204
+     158:	61 73       	andi	r22, 0x31	; 49
+     15a:	65 6d       	ori	r22, 0xD5	; 213
+     15c:	69 2e       	mov	r6, r25
+     15e:	63 6f       	ori	r22, 0xF3	; 243
+     160:	6d 00       	.word	0x006d	; ????
+     162:	00 00       	nop
+     164:	00 00       	nop
+     166:	00 04       	cpc	r0, r0
+     168:	04 00       	.word	0x0004	; ????
+     16a:	1f 06       	cpc	r1, r31
+     16c:	20 38       	cpi	r18, 0x80	; 128
+     16e:	05 05       	cpc	r16, r5
+     170:	00 04       	cpc	r0, r0
+     172:	28 03       	fmul	r18, r16
+     174:	01 02       	muls	r16, r17
+     176:	05 00       	.word	0x0005	; ????
+     178:	01 2a       	or	r0, r17
+     17a:	06 04       	cpc	r0, r6
+     17c:	03 02       	muls	r16, r19
+     17e:	00 05       	cpc	r16, r0
+     180:	2a 01       	movw	r4, r20
+     182:	01 00       	.word	0x0001	; ????
+     184:	00 04       	cpc	r0, r0
+     186:	04 05       	cpc	r16, r4
+     188:	05 00       	.word	0x0005	; ????
+     18a:	00 1f       	adc	r16, r16
+     18c:	06 20       	and	r0, r6
+     18e:	54 06       	cpc	r5, r20
+     190:	28 03       	fmul	r18, r16
+     192:	01 02       	muls	r16, r17
+     194:	07 00       	.word	0x0007	; ????
+     196:	04 2a       	or	r0, r20
+     198:	06 04       	cpc	r0, r6
+     19a:	09 08       	sbc	r0, r9
+     19c:	00 07       	cpc	r16, r16
+     19e:	2a 04       	cpc	r2, r10
+     1a0:	01 30       	cpi	r16, 0x01	; 1
+     1a2:	06 30       	cpi	r16, 0x06	; 6
+     1a4:	06 00       	.word	0x0006	; ????
+     1a6:	00 58       	subi	r16, 0x80	; 128
+     1a8:	02 04       	cpc	r0, r2
+     1aa:	04 00       	.word	0x0004	; ????
+     1ac:	1f 06       	cpc	r1, r31
+     1ae:	20 70       	andi	r18, 0x00	; 0
+     1b0:	02 02       	muls	r16, r18
+     1b2:	00 08       	sbc	r0, r0
+     1b4:	28 00       	.word	0x0028	; ????
+     1b6:	01 01       	movw	r0, r2
+     1b8:	18 04       	cpc	r1, r8
+     1ba:	04 02       	muls	r16, r20
+     1bc:	02 00       	.word	0x0002	; ????
+     1be:	09 28       	or	r0, r9
+     1c0:	00 01       	movw	r0, r0
+     1c2:	0a 18       	sub	r0, r10
+     1c4:	04 04       	cpc	r0, r4
+     1c6:	05 05       	cpc	r16, r5
+     1c8:	00 0a       	sbc	r0, r16
+     1ca:	28 03       	fmul	r18, r16
+     1cc:	00 1f       	adc	r16, r16
+     1ce:	06 20       	and	r0, r6
+     1d0:	8c 01       	movw	r16, r24
+     1d2:	02 0b       	sbc	r16, r18
+     1d4:	00 27       	eor	r16, r16
+     1d6:	2a 04       	cpc	r2, r10
+     1d8:	04 09       	sbc	r16, r4
+     1da:	01 00       	.word	0x0001	; ????
+     1dc:	0b 2a       	or	r0, r27
+     1de:	27 01       	movw	r4, r14
+     1e0:	0a 00       	.word	0x000a	; ????
+     1e2:	00 00       	nop
+     1e4:	00 00       	nop
+     1e6:	00 00       	nop
+     1e8:	00 04       	cpc	r0, r0
+     1ea:	04 10       	cpse	r0, r4
+     1ec:	10 00       	.word	0x0010	; ????
+     1ee:	1f 06       	cpc	r1, r31
+     1f0:	20 a8       	ldd	r2, Z+48	; 0x30
+     1f2:	00 0c       	add	r0, r0
+     1f4:	28 00       	.word	0x0028	; ????
+     1f6:	01 9e       	mul	r0, r17
+     1f8:	ca dc       	rcall	.-1644   	; 0xfffffb8e <__eeprom_end+0xff7efb8e>
+     1fa:	24 0e       	add	r2, r20
+     1fc:	e5 a9       	ldd	r30, Z+53	; 0x35
+     1fe:	e0 93 f3 a3 	sts	0xA3F3, r30
+     202:	b5 01       	movw	r22, r10
+     204:	00 40       	sbci	r16, 0x00	; 0
+     206:	6e 04       	cpc	r6, r14
+     208:	04 13       	cpse	r16, r20
+     20a:	13 00       	.word	0x0013	; ????
+     20c:	0d 28       	or	r0, r13
+     20e:	00 1f       	adc	r16, r16
+     210:	06 20       	and	r0, r6
+     212:	c4 03       	fmuls	r20, r20
+     214:	01 04       	cpc	r0, r1
+     216:	0e 00       	.word	0x000e	; ????
+     218:	9e ca       	rjmp	.-2756   	; 0xfffff756 <__eeprom_end+0xff7ef756>
+     21a:	dc 24       	eor	r13, r12
+     21c:	0e e5       	ldi	r16, 0x5E	; 94
+     21e:	a9 e0       	ldi	r26, 0x09	; 9
+     220:	93 f3       	brvs	.-28     	; 0x206 <__trampolines_end+0x184>
+     222:	a3 b5       	in	r26, 0x23	; 35
+     224:	02 00       	.word	0x0002	; ????
+     226:	40 6e       	ori	r20, 0xE0	; 224
+     228:	44 10       	cpse	r4, r4
+     22a:	14 00       	.word	0x0014	; ????
+     22c:	00 0e       	add	r0, r16
+     22e:	00 00       	nop
+     230:	1f 06       	cpc	r1, r31
+     232:	20 e0       	ldi	r18, 0x00	; 0
+     234:	02 02       	muls	r16, r18
+	...
+     24a:	04 04       	cpc	r0, r4
+     24c:	13 13       	cpse	r17, r19
+     24e:	00 0f       	add	r16, r16
+     250:	00 1f       	adc	r16, r16
+     252:	06 20       	and	r0, r6
+     254:	fc 28       	or	r15, r12
+     256:	03 01       	movw	r0, r6
+     258:	10 10       	cpse	r1, r0
+     25a:	00 9e       	mul	r0, r16
+     25c:	ca dc       	rcall	.-1644   	; 0xfffffbf2 <__eeprom_end+0xff7efbf2>
+     25e:	24 0e       	add	r2, r20
+     260:	e5 a9       	ldd	r30, Z+53	; 0x35
+     262:	e0 93 f3 a3 	sts	0xA3F3, r30
+     266:	b5 03       	fmuls	r19, r21
+     268:	00 40       	sbci	r16, 0x00	; 0
+     26a:	6e 14       	cp	r6, r14
+     26c:	00 14       	cp	r0, r0
+     26e:	00 00       	nop
+     270:	10 00       	.word	0x0010	; ????
+     272:	1f 06       	cpc	r1, r31
+     274:	21 18       	sub	r2, r1
+     276:	00 03       	mulsu	r16, r16
+     278:	02 00       	.word	0x0002	; ????
+	...
+     28a:	00 00       	nop
+     28c:	00 46       	sbci	r16, 0x60	; 96
+     28e:	14 03       	mulsu	r17, r20
+     290:	02 00       	.word	0x0002	; ????
+     292:	00 0a       	sbc	r0, r16
+     294:	06 21       	and	r16, r6
+     296:	34 11       	cpse	r19, r4
+     298:	29 02       	muls	r18, r25
+     29a:	01 00       	.word	0x0001	; ????
+	...
+     2b4:	1f 06       	cpc	r1, r31
+     2b6:	40 00       	.word	0x0040	; ????
+     2b8:	2a 27       	eor	r18, r26
+     2ba:	01 00       	.word	0x0001	; ????
+     2bc:	80 04       	cpc	r8, r0
+     2be:	00 0b       	sbc	r16, r16
+     2c0:	00 00       	nop
+     2c2:	00 02       	muls	r16, r16
+     2c4:	02 00       	.word	0x0002	; ????
+     2c6:	08 04       	cpc	r0, r8
+     2c8:	00 0e       	add	r0, r16
+     2ca:	00 00       	nop
+     2cc:	00 03       	mulsu	r16, r16
+     2ce:	02 00       	.word	0x0002	; ????
+     2d0:	02 04       	cpc	r0, r2
+     2d2:	00 10       	cpse	r0, r0
+     2d4:	00 05       	cpc	r16, r0
+     2d6:	06 40       	sbci	r16, 0x06	; 6
+     2d8:	1c 00       	.word	0x001c	; ????
+     2da:	11 00       	.word	0x0011	; ????
+	...
+     2f4:	00 00       	nop
+     2f6:	13 06       	cpc	r1, r19
+     2f8:	50 00       	.word	0x0050	; ????
+     2fa:	9e ca       	rjmp	.-2756   	; 0xfffff838 <__eeprom_end+0xff7ef838>
+     2fc:	dc 24       	eor	r13, r12
+     2fe:	0e e5       	ldi	r16, 0x5E	; 94
+     300:	a9 e0       	ldi	r26, 0x09	; 9
+     302:	93 f3       	brvs	.-28     	; 0x2e8 <__trampolines_end+0x266>
+     304:	a3 b5       	in	r26, 0x23	; 35
+     306:	00 00       	nop
+     308:	40 6e       	ori	r20, 0xE0	; 224
+	...
+     316:	00 0c       	add	r0, r0
+     318:	06 60       	ori	r16, 0x06	; 6
+	...
+     336:	00 00       	nop
+     338:	06 06       	cpc	r0, r22
+     33a:	f0 00       	.word	0x00f0	; ????
+     33c:	03 89       	ldd	r16, Z+19	; 0x13
+     33e:	61 00       	.word	0x0061	; ????
+	...
+
+00000358 <__ctors_start>:
+     358:	6a 03       	fmul	r22, r18
+
+0000035a <__ctors_end>:
+     35a:	11 24       	eor	r1, r1
+     35c:	1f be       	out	0x3f, r1	; 63
+     35e:	cf ef       	ldi	r28, 0xFF	; 255
+     360:	d8 e0       	ldi	r29, 0x08	; 8
+     362:	de bf       	out	0x3e, r29	; 62
+     364:	cd bf       	out	0x3d, r28	; 61
+
+00000366 <__do_copy_data>:
+     366:	11 e0       	ldi	r17, 0x01	; 1
+     368:	a0 e0       	ldi	r26, 0x00	; 0
+     36a:	b1 e0       	ldi	r27, 0x01	; 1
+     36c:	e4 e4       	ldi	r30, 0x44	; 68
+     36e:	f0 e1       	ldi	r31, 0x10	; 16
+     370:	02 c0       	rjmp	.+4      	; 0x376 <__do_copy_data+0x10>
+     372:	05 90       	lpm	r0, Z+
+     374:	0d 92       	st	X+, r0
+     376:	aa 30       	cpi	r26, 0x0A	; 10
+     378:	b1 07       	cpc	r27, r17
+     37a:	d9 f7       	brne	.-10     	; 0x372 <__do_copy_data+0xc>
+
+0000037c <__do_clear_bss>:
+     37c:	24 e0       	ldi	r18, 0x04	; 4
+     37e:	aa e0       	ldi	r26, 0x0A	; 10
+     380:	b1 e0       	ldi	r27, 0x01	; 1
+     382:	01 c0       	rjmp	.+2      	; 0x386 <.do_clear_bss_start>
+
+00000384 <.do_clear_bss_loop>:
+     384:	1d 92       	st	X+, r1
+
+00000386 <.do_clear_bss_start>:
+     386:	a1 37       	cpi	r26, 0x71	; 113
+     388:	b2 07       	cpc	r27, r18
+     38a:	e1 f7       	brne	.-8      	; 0x384 <.do_clear_bss_loop>
+
+0000038c <__do_global_ctors>:
+     38c:	13 e0       	ldi	r17, 0x03	; 3
+     38e:	ca e5       	ldi	r28, 0x5A	; 90
+     390:	d3 e0       	ldi	r29, 0x03	; 3
+     392:	04 c0       	rjmp	.+8      	; 0x39c <__do_global_ctors+0x10>
+     394:	22 97       	sbiw	r28, 0x02	; 2
+     396:	fe 01       	movw	r30, r28
+     398:	0e 94 0a 08 	call	0x1014	; 0x1014 <__tablejump__>
+     39c:	c8 35       	cpi	r28, 0x58	; 88
+     39e:	d1 07       	cpc	r29, r17
+     3a0:	c9 f7       	brne	.-14     	; 0x394 <__do_global_ctors+0x8>
+     3a2:	0e 94 50 03 	call	0x6a0	; 0x6a0 <main>
+     3a6:	0c 94 20 08 	jmp	0x1040	; 0x1040 <_exit>
+
+000003aa <__bad_interrupt>:
+     3aa:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000003ae <_ZN17Adafruit_BLE_UART9defaultRXEPhh>:
+/**************************************************************************/
+// default RX callback!
+
+void Adafruit_BLE_UART::defaultRX(uint8_t *buffer, uint8_t len)
+{
+  for(int i=0; i<len; i++)
+     3ae:	50 e0       	ldi	r21, 0x00	; 0
+     3b0:	14 16       	cp	r1, r20
+     3b2:	15 06       	cpc	r1, r21
+     3b4:	24 f5       	brge	.+72     	; 0x3fe <_ZN17Adafruit_BLE_UART9defaultRXEPhh+0x50>
+     3b6:	80 e0       	ldi	r24, 0x00	; 0
+     3b8:	90 e0       	ldi	r25, 0x00	; 0
+  {
+    uint16_t new_head = (uint16_t)(adafruit_ble_rx_head + 1) % ADAFRUIT_BLE_UART_RXBUFFER_SIZE;
+     3ba:	20 91 10 01 	lds	r18, 0x0110
+     3be:	30 91 11 01 	lds	r19, 0x0111
+     3c2:	2f 5f       	subi	r18, 0xFF	; 255
+     3c4:	3f 4f       	sbci	r19, 0xFF	; 255
+     3c6:	2f 73       	andi	r18, 0x3F	; 63
+     3c8:	33 27       	eor	r19, r19
+    
+    // if we should be storing the received character into the location
+    // just before the tail (meaning that the head would advance to the
+    // current location of the tail), we're about to overflow the buffer
+    // and so we don't write the character or advance the head.
+    if (new_head != adafruit_ble_rx_tail) {
+     3ca:	e0 91 0e 01 	lds	r30, 0x010E
+     3ce:	f0 91 0f 01 	lds	r31, 0x010F
+     3d2:	2e 17       	cp	r18, r30
+     3d4:	3f 07       	cpc	r19, r31
+     3d6:	79 f0       	breq	.+30     	; 0x3f6 <_ZN17Adafruit_BLE_UART9defaultRXEPhh+0x48>
+      adafruit_ble_rx_buffer[adafruit_ble_rx_head] = buffer[i];
+     3d8:	e0 91 10 01 	lds	r30, 0x0110
+     3dc:	f0 91 11 01 	lds	r31, 0x0111
+     3e0:	db 01       	movw	r26, r22
+     3e2:	a8 0f       	add	r26, r24
+     3e4:	b9 1f       	adc	r27, r25
+     3e6:	ac 91       	ld	r26, X
+     3e8:	ee 5e       	subi	r30, 0xEE	; 238
+     3ea:	fe 4f       	sbci	r31, 0xFE	; 254
+     3ec:	a0 83       	st	Z, r26
+
+      // debug echo print
+      // Serial.print((char)buffer[i]); 
+
+      adafruit_ble_rx_head = new_head;
+     3ee:	30 93 11 01 	sts	0x0111, r19
+     3f2:	20 93 10 01 	sts	0x0110, r18
+/**************************************************************************/
+// default RX callback!
+
+void Adafruit_BLE_UART::defaultRX(uint8_t *buffer, uint8_t len)
+{
+  for(int i=0; i<len; i++)
+     3f6:	01 96       	adiw	r24, 0x01	; 1
+     3f8:	84 17       	cp	r24, r20
+     3fa:	95 07       	cpc	r25, r21
+     3fc:	f4 f2       	brlt	.-68     	; 0x3ba <_ZN17Adafruit_BLE_UART9defaultRXEPhh+0xc>
+     3fe:	08 95       	ret
+
+00000400 <_ZN17Adafruit_BLE_UARTC1Eaaa>:
+/**************************************************************************/
+/*!
+    Constructor for the UART service
+*/
+/**************************************************************************/
+Adafruit_BLE_UART::Adafruit_BLE_UART(int8_t req, int8_t rdy, int8_t rst)
+     400:	fc 01       	movw	r30, r24
+{
+  debugMode = true;
+     402:	81 e0       	ldi	r24, 0x01	; 1
+     404:	84 83       	std	Z+4, r24	; 0x04
+  
+  HAL_IO_RADIO_REQN = req;
+     406:	60 93 0c 01 	sts	0x010C, r22
+  HAL_IO_RADIO_RDY = rdy;
+     40a:	40 93 0b 01 	sts	0x010B, r20
+  HAL_IO_RADIO_RESET = rst;
+     40e:	20 93 0d 01 	sts	0x010D, r18
+
+  rx_event = NULL;
+     412:	13 82       	std	Z+3, r1	; 0x03
+     414:	12 82       	std	Z+2, r1	; 0x02
+  aci_event = NULL;
+     416:	11 82       	std	Z+1, r1	; 0x01
+     418:	10 82       	st	Z, r1
+
+  adafruit_ble_rx_head = adafruit_ble_rx_tail = 0;
+     41a:	10 92 0f 01 	sts	0x010F, r1
+     41e:	10 92 0e 01 	sts	0x010E, r1
+     422:	10 92 11 01 	sts	0x0111, r1
+     426:	10 92 10 01 	sts	0x0110, r1
+
+  currentStatus = ACI_EVT_DISCONNECTED;
+     42a:	86 e8       	ldi	r24, 0x86	; 134
+     42c:	81 87       	std	Z+9, r24	; 0x09
+     42e:	08 95       	ret
+
+00000430 <_ZN17Adafruit_BLE_UART14setACIcallbackEPFv16aci_evt_opcode_tE>:
+}
+
+void Adafruit_BLE_UART::setACIcallback(aci_callback aciEvent) {
+  aci_event = aciEvent;
+     430:	fc 01       	movw	r30, r24
+     432:	71 83       	std	Z+1, r23	; 0x01
+     434:	60 83       	st	Z, r22
+     436:	08 95       	ret
+
+00000438 <_ZN17Adafruit_BLE_UART13setRXcallbackEPFvPhhE>:
+}
+
+void Adafruit_BLE_UART::setRXcallback(rx_callback rxEvent) {
+  rx_event = rxEvent;
+     438:	fc 01       	movw	r30, r24
+     43a:	73 83       	std	Z+3, r23	; 0x03
+     43c:	62 83       	std	Z+2, r22	; 0x02
+     43e:	08 95       	ret
+
+00000440 <_ZN17Adafruit_BLE_UART7pollACIEv>:
+    Handles low level ACI events, and passes them up to an application
+    level callback when appropriate
+*/
+/**************************************************************************/
+void Adafruit_BLE_UART::pollACI()
+{
+     440:	1f 93       	push	r17
+     442:	cf 93       	push	r28
+     444:	df 93       	push	r29
+     446:	ec 01       	movw	r28, r24
+  // We enter the if statement only when there is a ACI event available to be processed
+  if (lib_aci_event_get(&aci_state, &aci_data))
+     448:	68 e6       	ldi	r22, 0x68	; 104
+     44a:	71 e0       	ldi	r23, 0x01	; 1
+     44c:	8a e8       	ldi	r24, 0x8A	; 138
+     44e:	91 e0       	ldi	r25, 0x01	; 1
+     450:	0e 94 c7 07 	call	0xf8e	; 0xf8e <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t>
+     454:	88 23       	and	r24, r24
+     456:	09 f4       	brne	.+2      	; 0x45a <_ZN17Adafruit_BLE_UART7pollACIEv+0x1a>
+     458:	aa c0       	rjmp	.+340    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+  {
+    aci_evt_t * aci_evt;
+    
+    aci_evt = &aci_data.evt;    
+    switch(aci_evt->evt_opcode)
+     45a:	40 91 6a 01 	lds	r20, 0x016A
+     45e:	50 e0       	ldi	r21, 0x00	; 0
+     460:	fa 01       	movw	r30, r20
+     462:	e1 58       	subi	r30, 0x81	; 129
+     464:	f1 09       	sbc	r31, r1
+     466:	ed 30       	cpi	r30, 0x0D	; 13
+     468:	f1 05       	cpc	r31, r1
+     46a:	08 f0       	brcs	.+2      	; 0x46e <_ZN17Adafruit_BLE_UART7pollACIEv+0x2e>
+     46c:	a0 c0       	rjmp	.+320    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+     46e:	ec 5c       	subi	r30, 0xCC	; 204
+     470:	ff 4f       	sbci	r31, 0xFF	; 255
+     472:	0c 94 08 08 	jmp	0x1010	; 0x1010 <__tablejump2__>
+	if (aci_event)
+	  aci_event(ACI_EVT_DEVICE_STARTED);
+	break;
+        
+      case ACI_EVT_DATA_RECEIVED:
+        for(int i=0; i<aci_evt->len - 2; i++)
+     476:	10 91 69 01 	lds	r17, 0x0169
+     47a:	21 2f       	mov	r18, r17
+     47c:	30 e0       	ldi	r19, 0x00	; 0
+     47e:	22 50       	subi	r18, 0x02	; 2
+     480:	31 09       	sbc	r19, r1
+     482:	12 16       	cp	r1, r18
+     484:	13 06       	cpc	r1, r19
+     486:	0c f4       	brge	.+2      	; 0x48a <_ZN17Adafruit_BLE_UART7pollACIEv+0x4a>
+     488:	61 c0       	rjmp	.+194    	; 0x54c <_ZN17Adafruit_BLE_UART7pollACIEv+0x10c>
+     48a:	6c c0       	rjmp	.+216    	; 0x564 <_ZN17Adafruit_BLE_UART7pollACIEv+0x124>
+    switch(aci_evt->evt_opcode)
+    {
+        /* As soon as you reset the nRF8001 you will get an ACI Device Started Event */
+        case ACI_EVT_DEVICE_STARTED:
+        {          
+          aci_state.data_credit_total = aci_evt->params.device_started.credit_available;
+     48c:	80 91 6d 01 	lds	r24, 0x016D
+     490:	80 93 91 01 	sts	0x0191, r24
+          switch(aci_evt->params.device_started.device_mode)
+     494:	80 91 6b 01 	lds	r24, 0x016B
+     498:	82 30       	cpi	r24, 0x02	; 2
+     49a:	19 f0       	breq	.+6      	; 0x4a2 <_ZN17Adafruit_BLE_UART7pollACIEv+0x62>
+     49c:	83 30       	cpi	r24, 0x03	; 3
+     49e:	31 f0       	breq	.+12     	; 0x4ac <_ZN17Adafruit_BLE_UART7pollACIEv+0x6c>
+     4a0:	86 c0       	rjmp	.+268    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+          {
+            case ACI_DEVICE_SETUP:
+            /* Device is in setup mode! */
+            if (ACI_STATUS_TRANSACTION_COMPLETE != do_aci_setup(&aci_state))
+     4a2:	8a e8       	ldi	r24, 0x8A	; 138
+     4a4:	91 e0       	ldi	r25, 0x01	; 1
+     4a6:	0e 94 38 04 	call	0x870	; 0x870 <_Z12do_aci_setupP11aci_state_t>
+     4aa:	81 c0       	rjmp	.+258    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+            break;
+            
+            case ACI_DEVICE_STANDBY:
+              /* Start advertising ... first value is advertising time in seconds, the */
+              /* second value is the advertising interval in 0.625ms units */
+              lib_aci_connect(adv_timeout, adv_interval);
+     4ac:	6f 81       	ldd	r22, Y+7	; 0x07
+     4ae:	78 85       	ldd	r23, Y+8	; 0x08
+     4b0:	8d 81       	ldd	r24, Y+5	; 0x05
+     4b2:	9e 81       	ldd	r25, Y+6	; 0x06
+     4b4:	0e 94 5b 07 	call	0xeb6	; 0xeb6 <_Z15lib_aci_connectjj>
+
+//// more callbacks
+
+void Adafruit_BLE_UART::defaultACICallback(aci_evt_opcode_t event)
+{
+  currentStatus = event;
+     4b8:	81 e8       	ldi	r24, 0x81	; 129
+     4ba:	89 87       	std	Y+9, r24	; 0x09
+            case ACI_DEVICE_STANDBY:
+              /* Start advertising ... first value is advertising time in seconds, the */
+              /* second value is the advertising interval in 0.625ms units */
+              lib_aci_connect(adv_timeout, adv_interval);
+              defaultACICallback(ACI_EVT_DEVICE_STARTED);
+	      if (aci_event) 
+     4bc:	e8 81       	ld	r30, Y
+     4be:	f9 81       	ldd	r31, Y+1	; 0x01
+     4c0:	30 97       	sbiw	r30, 0x00	; 0
+     4c2:	09 f4       	brne	.+2      	; 0x4c6 <_ZN17Adafruit_BLE_UART7pollACIEv+0x86>
+     4c4:	74 c0       	rjmp	.+232    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+		aci_event(ACI_EVT_DEVICE_STARTED);
+     4c6:	09 95       	icall
+     4c8:	72 c0       	rjmp	.+228    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+        }
+        break;
+        
+      case ACI_EVT_CMD_RSP:
+        /* If an ACI command response event comes with an error -> stop */
+        if (ACI_STATUS_SUCCESS != aci_evt->params.cmd_rsp.cmd_status)
+     4ca:	80 91 6c 01 	lds	r24, 0x016C
+     4ce:	81 11       	cpse	r24, r1
+     4d0:	ff cf       	rjmp	.-2      	; 0x4d0 <_ZN17Adafruit_BLE_UART7pollACIEv+0x90>
+            Serial.println(F("Evt Cmd respone: Error. Arduino is in an while(1); loop"));
+			*/
+          }
+          while (1);
+        }
+        if (ACI_CMD_GET_DEVICE_VERSION == aci_evt->params.cmd_rsp.cmd_opcode)
+     4d2:	80 91 6b 01 	lds	r24, 0x016B
+     4d6:	89 30       	cpi	r24, 0x09	; 9
+     4d8:	09 f0       	breq	.+2      	; 0x4dc <_ZN17Adafruit_BLE_UART7pollACIEv+0x9c>
+     4da:	69 c0       	rjmp	.+210    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+        {
+          // Store the version and configuration information of the nRF8001 in the Hardware Revision String Characteristic
+          lib_aci_set_local_data(&aci_state, PIPE_DEVICE_INFORMATION_HARDWARE_REVISION_STRING_SET, 
+            (uint8_t *)&(aci_evt->params.cmd_rsp.params.get_device_version), sizeof(aci_evt_cmd_rsp_params_get_device_version_t));
+     4dc:	29 e0       	ldi	r18, 0x09	; 9
+     4de:	4d e6       	ldi	r20, 0x6D	; 109
+     4e0:	51 e0       	ldi	r21, 0x01	; 1
+     4e2:	61 e0       	ldi	r22, 0x01	; 1
+     4e4:	8a e8       	ldi	r24, 0x8A	; 138
+     4e6:	91 e0       	ldi	r25, 0x01	; 1
+     4e8:	0e 94 19 07 	call	0xe32	; 0xe32 <_Z22lib_aci_set_local_dataP11aci_state_thPhh>
+     4ec:	60 c0       	rjmp	.+192    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+        }        
+        break;
+        
+      case ACI_EVT_CONNECTED:
+        aci_state.data_credit_available = aci_state.data_credit_total;
+     4ee:	80 91 91 01 	lds	r24, 0x0191
+     4f2:	80 93 93 01 	sts	0x0193, r24
+        /* Get the device version of the nRF8001 and store it in the Hardware Revision String */
+        lib_aci_device_version();
+     4f6:	0e 94 10 07 	call	0xe20	; 0xe20 <_Z22lib_aci_device_versionv>
+
+//// more callbacks
+
+void Adafruit_BLE_UART::defaultACICallback(aci_evt_opcode_t event)
+{
+  currentStatus = event;
+     4fa:	85 e8       	ldi	r24, 0x85	; 133
+     4fc:	89 87       	std	Y+9, r24	; 0x09
+        aci_state.data_credit_available = aci_state.data_credit_total;
+        /* Get the device version of the nRF8001 and store it in the Hardware Revision String */
+        lib_aci_device_version();
+        
+	defaultACICallback(ACI_EVT_CONNECTED);
+	if (aci_event) 
+     4fe:	e8 81       	ld	r30, Y
+     500:	f9 81       	ldd	r31, Y+1	; 0x01
+     502:	30 97       	sbiw	r30, 0x00	; 0
+     504:	09 f0       	breq	.+2      	; 0x508 <_ZN17Adafruit_BLE_UART7pollACIEv+0xc8>
+	  aci_event(ACI_EVT_CONNECTED);
+     506:	09 95       	icall
+        
+      case ACI_EVT_PIPE_STATUS:
+        if (lib_aci_is_pipe_available(&aci_state, PIPE_UART_OVER_BTLE_UART_TX_TX) && (false == timing_change_done))
+     508:	63 e0       	ldi	r22, 0x03	; 3
+     50a:	8a e8       	ldi	r24, 0x8A	; 138
+     50c:	91 e0       	ldi	r25, 0x01	; 1
+     50e:	0e 94 b5 06 	call	0xd6a	; 0xd6a <_Z25lib_aci_is_pipe_availableP11aci_state_th>
+     512:	88 23       	and	r24, r24
+     514:	09 f4       	brne	.+2      	; 0x518 <_ZN17Adafruit_BLE_UART7pollACIEv+0xd8>
+     516:	4b c0       	rjmp	.+150    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+     518:	80 91 67 01 	lds	r24, 0x0167
+     51c:	81 11       	cpse	r24, r1
+     51e:	47 c0       	rjmp	.+142    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+     520:	41 c0       	rjmp	.+130    	; 0x5a4 <_ZN17Adafruit_BLE_UART7pollACIEv+0x164>
+
+//// more callbacks
+
+void Adafruit_BLE_UART::defaultACICallback(aci_evt_opcode_t event)
+{
+  currentStatus = event;
+     522:	86 e8       	ldi	r24, 0x86	; 134
+     524:	89 87       	std	Y+9, r24	; 0x09
+      case ACI_EVT_DISCONNECTED:
+        /* Restart advertising ... first value is advertising time in seconds, the */
+        /* second value is the advertising interval in 0.625ms units */
+
+	defaultACICallback(ACI_EVT_DISCONNECTED);
+	if (aci_event)
+     526:	e8 81       	ld	r30, Y
+     528:	f9 81       	ldd	r31, Y+1	; 0x01
+     52a:	30 97       	sbiw	r30, 0x00	; 0
+     52c:	09 f0       	breq	.+2      	; 0x530 <_ZN17Adafruit_BLE_UART7pollACIEv+0xf0>
+	  aci_event(ACI_EVT_DISCONNECTED);
+     52e:	09 95       	icall
+
+	lib_aci_connect(adv_timeout, adv_interval);
+     530:	6f 81       	ldd	r22, Y+7	; 0x07
+     532:	78 85       	ldd	r23, Y+8	; 0x08
+     534:	8d 81       	ldd	r24, Y+5	; 0x05
+     536:	9e 81       	ldd	r25, Y+6	; 0x06
+     538:	0e 94 5b 07 	call	0xeb6	; 0xeb6 <_Z15lib_aci_connectjj>
+
+//// more callbacks
+
+void Adafruit_BLE_UART::defaultACICallback(aci_evt_opcode_t event)
+{
+  currentStatus = event;
+     53c:	81 e8       	ldi	r24, 0x81	; 129
+     53e:	89 87       	std	Y+9, r24	; 0x09
+	  aci_event(ACI_EVT_DISCONNECTED);
+
+	lib_aci_connect(adv_timeout, adv_interval);
+
+	defaultACICallback(ACI_EVT_DEVICE_STARTED);
+	if (aci_event)
+     540:	e8 81       	ld	r30, Y
+     542:	f9 81       	ldd	r31, Y+1	; 0x01
+     544:	30 97       	sbiw	r30, 0x00	; 0
+     546:	99 f1       	breq	.+102    	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+	  aci_event(ACI_EVT_DEVICE_STARTED);
+     548:	09 95       	icall
+     54a:	31 c0       	rjmp	.+98     	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+     54c:	ac e6       	ldi	r26, 0x6C	; 108
+     54e:	b1 e0       	ldi	r27, 0x01	; 1
+     550:	e3 e5       	ldi	r30, 0x53	; 83
+     552:	f1 e0       	ldi	r31, 0x01	; 1
+	break;
+        
+      case ACI_EVT_DATA_RECEIVED:
+        for(int i=0; i<aci_evt->len - 2; i++)
+     554:	80 e0       	ldi	r24, 0x00	; 0
+     556:	90 e0       	ldi	r25, 0x00	; 0
+        {
+          /* Fill uart_buffer with incoming data */
+          uart_buffer[i] = aci_evt->params.data_received.rx_data.aci_data[i];
+     558:	4d 91       	ld	r20, X+
+     55a:	41 93       	st	Z+, r20
+	if (aci_event)
+	  aci_event(ACI_EVT_DEVICE_STARTED);
+	break;
+        
+      case ACI_EVT_DATA_RECEIVED:
+        for(int i=0; i<aci_evt->len - 2; i++)
+     55c:	01 96       	adiw	r24, 0x01	; 1
+     55e:	82 17       	cp	r24, r18
+     560:	93 07       	cpc	r25, r19
+     562:	d4 f3       	brlt	.-12     	; 0x558 <_ZN17Adafruit_BLE_UART7pollACIEv+0x118>
+        {
+          /* Fill uart_buffer with incoming data */
+          uart_buffer[i] = aci_evt->params.data_received.rx_data.aci_data[i];
+        }
+        /* Set the buffer len */
+        uart_buffer_len = aci_evt->len - 2;
+     564:	12 50       	subi	r17, 0x02	; 2
+     566:	10 93 52 01 	sts	0x0152, r17
+	defaultRX(uart_buffer, uart_buffer_len);
+     56a:	41 2f       	mov	r20, r17
+     56c:	63 e5       	ldi	r22, 0x53	; 83
+     56e:	71 e0       	ldi	r23, 0x01	; 1
+     570:	ce 01       	movw	r24, r28
+     572:	0e 94 d7 01 	call	0x3ae	; 0x3ae <_ZN17Adafruit_BLE_UART9defaultRXEPhh>
+        if (rx_event)
+     576:	ea 81       	ldd	r30, Y+2	; 0x02
+     578:	fb 81       	ldd	r31, Y+3	; 0x03
+     57a:	30 97       	sbiw	r30, 0x00	; 0
+     57c:	c1 f0       	breq	.+48     	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+	  rx_event(uart_buffer, uart_buffer_len);
+     57e:	61 2f       	mov	r22, r17
+     580:	83 e5       	ldi	r24, 0x53	; 83
+     582:	91 e0       	ldi	r25, 0x01	; 1
+     584:	09 95       	icall
+     586:	13 c0       	rjmp	.+38     	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+        break;
+   
+      case ACI_EVT_DATA_CREDIT:
+        aci_state.data_credit_available = aci_state.data_credit_available + aci_evt->params.data_credit.credit;
+     588:	e3 e9       	ldi	r30, 0x93	; 147
+     58a:	f1 e0       	ldi	r31, 0x01	; 1
+     58c:	90 91 6b 01 	lds	r25, 0x016B
+     590:	80 81       	ld	r24, Z
+     592:	89 0f       	add	r24, r25
+     594:	80 83       	st	Z, r24
+        break;
+     596:	0b c0       	rjmp	.+22     	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+          Serial.println(aci_evt->params.pipe_error.error_code, HEX);
+		*/
+        }
+
+        /* Increment the credit available as the data packet was not sent */
+        aci_state.data_credit_available++;
+     598:	e3 e9       	ldi	r30, 0x93	; 147
+     59a:	f1 e0       	ldi	r31, 0x01	; 1
+     59c:	80 81       	ld	r24, Z
+     59e:	8f 5f       	subi	r24, 0xFF	; 255
+     5a0:	80 83       	st	Z, r24
+        break;
+     5a2:	05 c0       	rjmp	.+10     	; 0x5ae <_ZN17Adafruit_BLE_UART7pollACIEv+0x16e>
+	  aci_event(ACI_EVT_CONNECTED);
+        
+      case ACI_EVT_PIPE_STATUS:
+        if (lib_aci_is_pipe_available(&aci_state, PIPE_UART_OVER_BTLE_UART_TX_TX) && (false == timing_change_done))
+        {
+          lib_aci_change_timing_GAP_PPCP(); // change the timing on the link as specified in the nRFgo studio -> nRF8001 conf. -> GAP. 
+     5a4:	0e 94 be 07 	call	0xf7c	; 0xf7c <_Z30lib_aci_change_timing_GAP_PPCPv>
+                                            // Used to increase or decrease bandwidth
+          timing_change_done = true;
+     5a8:	81 e0       	ldi	r24, 0x01	; 1
+     5aa:	80 93 67 01 	sts	0x0167, r24
+       MCUCR = bit (BODS) | bit (BODSE);
+       MCUCR = bit (BODS); 
+       sleep_cpu (); 
+      */	   
+  }
+}
+     5ae:	df 91       	pop	r29
+     5b0:	cf 91       	pop	r28
+     5b2:	1f 91       	pop	r17
+     5b4:	08 95       	ret
+
+000005b6 <_ZN17Adafruit_BLE_UART5writeEPhh>:
+  return written;
+}
+
+
+uint16_t Adafruit_BLE_UART::write(uint8_t * buffer, uint8_t len)
+{
+     5b6:	ff 92       	push	r15
+     5b8:	0f 93       	push	r16
+     5ba:	1f 93       	push	r17
+     5bc:	cf 93       	push	r28
+     5be:	df 93       	push	r29
+     5c0:	ec 01       	movw	r28, r24
+     5c2:	8b 01       	movw	r16, r22
+     5c4:	f4 2e       	mov	r15, r20
+     5c6:	84 e1       	ldi	r24, 0x14	; 20
+     5c8:	84 17       	cp	r24, r20
+     5ca:	20 f4       	brcc	.+8      	; 0x5d4 <_ZN17Adafruit_BLE_UART5writeEPhh+0x1e>
+     5cc:	0f 2e       	mov	r0, r31
+     5ce:	f4 e1       	ldi	r31, 0x14	; 20
+     5d0:	ff 2e       	mov	r15, r31
+     5d2:	f0 2d       	mov	r31, r0
+    len = 20;
+  }
+
+#ifdef BLE_RW_DEBUG
+  //Serial.print(F("\tWriting out to BTLE:"));
+  for (uint8_t i=0; i<len; i++) {
+     5d4:	ff 20       	and	r15, r15
+     5d6:	21 f0       	breq	.+8      	; 0x5e0 <_ZN17Adafruit_BLE_UART5writeEPhh+0x2a>
+     5d8:	90 e0       	ldi	r25, 0x00	; 0
+     5da:	9f 5f       	subi	r25, 0xFF	; 255
+     5dc:	9f 11       	cpse	r25, r15
+     5de:	fd cf       	rjmp	.-6      	; 0x5da <_ZN17Adafruit_BLE_UART5writeEPhh+0x24>
+    //Serial.print(F(" 0x")); Serial.print(buffer[i], HEX);
+  }
+  //Serial.println();
+#endif
+
+  if (lib_aci_is_pipe_available(&aci_state, PIPE_UART_OVER_BTLE_UART_TX_TX))
+     5e0:	63 e0       	ldi	r22, 0x03	; 3
+     5e2:	8a e8       	ldi	r24, 0x8A	; 138
+     5e4:	91 e0       	ldi	r25, 0x01	; 1
+     5e6:	0e 94 b5 06 	call	0xd6a	; 0xd6a <_Z25lib_aci_is_pipe_availableP11aci_state_th>
+     5ea:	88 23       	and	r24, r24
+     5ec:	99 f0       	breq	.+38     	; 0x614 <_ZN17Adafruit_BLE_UART5writeEPhh+0x5e>
+  {
+    lib_aci_send_data(PIPE_UART_OVER_BTLE_UART_TX_TX, buffer, len);
+     5ee:	4f 2d       	mov	r20, r15
+     5f0:	b8 01       	movw	r22, r16
+     5f2:	83 e0       	ldi	r24, 0x03	; 3
+     5f4:	0e 94 77 07 	call	0xeee	; 0xeee <_Z17lib_aci_send_datahPhh>
+    aci_state.data_credit_available--;
+     5f8:	e3 e9       	ldi	r30, 0x93	; 147
+     5fa:	f1 e0       	ldi	r31, 0x01	; 1
+     5fc:	80 81       	ld	r24, Z
+     5fe:	81 50       	subi	r24, 0x01	; 1
+     600:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     602:	8f e1       	ldi	r24, 0x1F	; 31
+     604:	9e e4       	ldi	r25, 0x4E	; 78
+     606:	01 97       	sbiw	r24, 0x01	; 1
+     608:	f1 f7       	brne	.-4      	; 0x606 <_ZN17Adafruit_BLE_UART5writeEPhh+0x50>
+     60a:	00 c0       	rjmp	.+0      	; 0x60c <_ZN17Adafruit_BLE_UART5writeEPhh+0x56>
+     60c:	00 00       	nop
+
+    _delay_ms(10); // required 10ms delay between sends
+    return len;
+     60e:	8f 2d       	mov	r24, r15
+     610:	90 e0       	ldi	r25, 0x00	; 0
+     612:	05 c0       	rjmp	.+10     	; 0x61e <_ZN17Adafruit_BLE_UART5writeEPhh+0x68>
+  }
+
+  pollACI();
+     614:	ce 01       	movw	r24, r28
+     616:	0e 94 20 02 	call	0x440	; 0x440 <_ZN17Adafruit_BLE_UART7pollACIEv>
+  
+  return 0;
+     61a:	80 e0       	ldi	r24, 0x00	; 0
+     61c:	90 e0       	ldi	r25, 0x00	; 0
+}
+     61e:	df 91       	pop	r29
+     620:	cf 91       	pop	r28
+     622:	1f 91       	pop	r17
+     624:	0f 91       	pop	r16
+     626:	ff 90       	pop	r15
+     628:	08 95       	ret
+
+0000062a <_ZN17Adafruit_BLE_UART5beginEjj>:
+*/
+/**************************************************************************/
+bool Adafruit_BLE_UART::begin(uint16_t advTimeout, uint16_t advInterval) 
+{
+  /* Store the advertising timeout and interval */
+  adv_timeout = advTimeout;   /* ToDo: Check range! */
+     62a:	fc 01       	movw	r30, r24
+     62c:	76 83       	std	Z+6, r23	; 0x06
+     62e:	65 83       	std	Z+5, r22	; 0x05
+  adv_interval = advInterval; /* ToDo: Check range! */
+     630:	50 87       	std	Z+8, r21	; 0x08
+     632:	47 83       	std	Z+7, r20	; 0x07
+  
+  /* Setup the service data from nRFGo Studio (services.h) */
+  if (NULL != services_pipe_type_mapping)
+  {
+    aci_state.aci_setup_info.services_pipe_type_mapping = &services_pipe_type_mapping[0];
+     634:	80 e0       	ldi	r24, 0x00	; 0
+     636:	91 e0       	ldi	r25, 0x01	; 1
+     638:	90 93 8b 01 	sts	0x018B, r25
+     63c:	80 93 8a 01 	sts	0x018A, r24
+  }
+  else
+  {
+    aci_state.aci_setup_info.services_pipe_type_mapping = NULL;
+  }
+  aci_state.aci_setup_info.number_of_pipes    = NUMBER_OF_PIPES;
+     640:	83 e0       	ldi	r24, 0x03	; 3
+     642:	80 93 8c 01 	sts	0x018C, r24
+  aci_state.aci_setup_info.setup_msgs         = (hal_aci_data_t*) setup_msgs;
+     646:	82 e8       	ldi	r24, 0x82	; 130
+     648:	90 e0       	ldi	r25, 0x00	; 0
+     64a:	90 93 8e 01 	sts	0x018E, r25
+     64e:	80 93 8d 01 	sts	0x018D, r24
+  aci_state.aci_setup_info.num_setup_msgs     = NB_SETUP_MESSAGES;
+     652:	86 e1       	ldi	r24, 0x16	; 22
+     654:	80 93 8f 01 	sts	0x018F, r24
+
+  /* Pass the service data into the appropriate struct in the ACI */
+  lib_aci_init(&aci_state);
+     658:	8a e8       	ldi	r24, 0x8A	; 138
+     65a:	91 e0       	ldi	r25, 0x01	; 1
+     65c:	0e 94 c7 06 	call	0xd8e	; 0xd8e <_Z12lib_aci_initP11aci_state_t>
+
+  /* ToDo: Check for chip ID to make sure we're connected! */
+  
+  return true;
+}
+     660:	81 e0       	ldi	r24, 0x01	; 1
+     662:	08 95       	ret
+
+00000664 <_Z11aciCallback16aci_evt_opcode_t>:
+/*!
+    This function is called whenever select ACI events happen
+*/
+/**************************************************************************/
+void aciCallback(aci_evt_opcode_t event)
+{
+     664:	08 95       	ret
+
+00000666 <_Z10rxCallbackPhh>:
+/*!
+    This function is called whenever data arrives on the RX channel
+*/
+/**************************************************************************/
+void rxCallback(uint8_t *buffer, uint8_t len)
+{
+     666:	46 2f       	mov	r20, r22
+  //Serial.print(F("Received "));
+  //Serial.print(len);
+  //Serial.print(F(" bytes: "));
+  for(int i=0; i<len; i++)
+     668:	e6 2f       	mov	r30, r22
+     66a:	f0 e0       	ldi	r31, 0x00	; 0
+     66c:	1e 16       	cp	r1, r30
+     66e:	1f 06       	cpc	r1, r31
+     670:	8c f4       	brge	.+34     	; 0x694 <_Z10rxCallbackPhh+0x2e>
+     672:	a0 e0       	ldi	r26, 0x00	; 0
+     674:	b0 e0       	ldi	r27, 0x00	; 0
+/*!
+    This function is called whenever data arrives on the RX channel
+*/
+/**************************************************************************/
+void rxCallback(uint8_t *buffer, uint8_t len)
+{
+     676:	70 e0       	ldi	r23, 0x00	; 0
+     678:	50 e0       	ldi	r21, 0x00	; 0
+     67a:	09 c0       	rjmp	.+18     	; 0x68e <_Z10rxCallbackPhh+0x28>
+  for(int i=0; i<len; i++)
+   //Serial.print((char)buffer[i]); 
+
+  //Serial.print(F(" ["));
+
+  for(int i=0; i<len; i++)
+     67c:	2f 5f       	subi	r18, 0xFF	; 255
+     67e:	3f 4f       	sbci	r19, 0xFF	; 255
+     680:	2e 17       	cp	r18, r30
+     682:	3f 07       	cpc	r19, r31
+     684:	dc f3       	brlt	.-10     	; 0x67c <_Z10rxCallbackPhh+0x16>
+void rxCallback(uint8_t *buffer, uint8_t len)
+{
+  //Serial.print(F("Received "));
+  //Serial.print(len);
+  //Serial.print(F(" bytes: "));
+  for(int i=0; i<len; i++)
+     686:	11 96       	adiw	r26, 0x01	; 1
+     688:	ae 17       	cp	r26, r30
+     68a:	bf 07       	cpc	r27, r31
+     68c:	1c f4       	brge	.+6      	; 0x694 <_Z10rxCallbackPhh+0x2e>
+/*!
+    This function is called whenever data arrives on the RX channel
+*/
+/**************************************************************************/
+void rxCallback(uint8_t *buffer, uint8_t len)
+{
+     68e:	27 2f       	mov	r18, r23
+     690:	35 2f       	mov	r19, r21
+     692:	f4 cf       	rjmp	.-24     	; 0x67c <_Z10rxCallbackPhh+0x16>
+    //Serial.print(" 0x"); Serial.print((char)buffer[i], HEX); 
+  }
+  //Serial.println(F(" ]"));
+
+  /* Echo the same data back! */  
+  uart.write(buffer, len);
+     694:	bc 01       	movw	r22, r24
+     696:	8b ea       	ldi	r24, 0xAB	; 171
+     698:	91 e0       	ldi	r25, 0x01	; 1
+     69a:	0e 94 db 02 	call	0x5b6	; 0x5b6 <_ZN17Adafruit_BLE_UART5writeEPhh>
+     69e:	08 95       	ret
+
+000006a0 <main>:
+}
+
+int main(void)
+{
+	sei();
+     6a0:	78 94       	sei
+	//EICRA |= (1 << ISC00) | (1 << ISC01) | (1 << ISC10) | (1 << ISC11);
+	uart.setRXcallback(rxCallback);
+     6a2:	63 e3       	ldi	r22, 0x33	; 51
+     6a4:	73 e0       	ldi	r23, 0x03	; 3
+     6a6:	8b ea       	ldi	r24, 0xAB	; 171
+     6a8:	91 e0       	ldi	r25, 0x01	; 1
+     6aa:	0e 94 1c 02 	call	0x438	; 0x438 <_ZN17Adafruit_BLE_UART13setRXcallbackEPFvPhhE>
+	uart.setACIcallback(aciCallback);
+     6ae:	62 e3       	ldi	r22, 0x32	; 50
+     6b0:	73 e0       	ldi	r23, 0x03	; 3
+     6b2:	8b ea       	ldi	r24, 0xAB	; 171
+     6b4:	91 e0       	ldi	r25, 0x01	; 1
+     6b6:	0e 94 18 02 	call	0x430	; 0x430 <_ZN17Adafruit_BLE_UART14setACIcallbackEPFv16aci_evt_opcode_tE>
+	uart.begin();
+     6ba:	40 e5       	ldi	r20, 0x50	; 80
+     6bc:	50 e0       	ldi	r21, 0x00	; 0
+     6be:	60 e0       	ldi	r22, 0x00	; 0
+     6c0:	70 e0       	ldi	r23, 0x00	; 0
+     6c2:	8b ea       	ldi	r24, 0xAB	; 171
+     6c4:	91 e0       	ldi	r25, 0x01	; 1
+     6c6:	0e 94 15 03 	call	0x62a	; 0x62a <_ZN17Adafruit_BLE_UART5beginEjj>
+    while(1)
+    {
+		uart.pollACI();
+     6ca:	8b ea       	ldi	r24, 0xAB	; 171
+     6cc:	91 e0       	ldi	r25, 0x01	; 1
+     6ce:	0e 94 20 02 	call	0x440	; 0x440 <_ZN17Adafruit_BLE_UART7pollACIEv>
+     6d2:	fb cf       	rjmp	.-10     	; 0x6ca <main+0x2a>
+
+000006d4 <_GLOBAL__sub_I_uart>:
+
+#define ADAFRUITBLE_REQ PORTB1 //9
+#define ADAFRUITBLE_RDY PORTD2 //2
+#define ADAFRUITBLE_RST PORTD4 //4
+
+Adafruit_BLE_UART uart = Adafruit_BLE_UART(ADAFRUITBLE_REQ, ADAFRUITBLE_RDY, ADAFRUITBLE_RST);
+     6d4:	24 e0       	ldi	r18, 0x04	; 4
+     6d6:	42 e0       	ldi	r20, 0x02	; 2
+     6d8:	61 e0       	ldi	r22, 0x01	; 1
+     6da:	8b ea       	ldi	r24, 0xAB	; 171
+     6dc:	91 e0       	ldi	r25, 0x01	; 1
+     6de:	0e 94 00 02 	call	0x400	; 0x400 <_ZN17Adafruit_BLE_UARTC1Eaaa>
+     6e2:	08 95       	ret
+
+000006e4 <_ZN8SPIClass5beginEv>:
+
+void SPIClass::begin() {
+
+  // Set SS to high so a connected chip will be "deselected" by default
+  //digitalWrite(SS, HIGH);
+  PORTB |= (1 << PORTB2);
+     6e4:	2a 9a       	sbi	0x05, 2	; 5
+  // When the SS pin is set as OUTPUT, it can be used as
+  // a general purpose output port (it doesn't influence
+  // SPI operations).
+  //pinMode(SS, OUTPUT);
+  
+  DDRB |= (1 << PORTB2);
+     6e6:	22 9a       	sbi	0x04, 2	; 4
+
+  // Warning: if the SS pin ever becomes a LOW INPUT then SPI
+  // automatically switches to Slave, so the data direction of
+  // the SS pin MUST be kept as OUTPUT.
+  SPCR |= _BV(MSTR);
+     6e8:	8c b5       	in	r24, 0x2c	; 44
+     6ea:	80 61       	ori	r24, 0x10	; 16
+     6ec:	8c bd       	out	0x2c, r24	; 44
+  SPCR |= _BV(SPE);
+     6ee:	8c b5       	in	r24, 0x2c	; 44
+     6f0:	80 64       	ori	r24, 0x40	; 64
+     6f2:	8c bd       	out	0x2c, r24	; 44
+  // By doing this AFTER enabling SPI, we avoid accidentally
+  // clocking in a single bit since the lines go directly
+  // from "input" to SPI control.  
+  // http://code.google.com/p/arduino/issues/detail?id=888
+  //pinMode(SCK, OUTPUT);
+  PORTB |= (1 << PORTB5);
+     6f4:	2d 9a       	sbi	0x05, 5	; 5
+  //pinMode(MOSI, OUTPUT);
+  PORTB |= (1 << PORTB3);
+     6f6:	2b 9a       	sbi	0x05, 3	; 5
+     6f8:	08 95       	ret
+
+000006fa <_ZN8SPIClass3endEv>:
+}
+
+
+void SPIClass::end() {
+  SPCR &= ~_BV(SPE);
+     6fa:	8c b5       	in	r24, 0x2c	; 44
+     6fc:	8f 7b       	andi	r24, 0xBF	; 191
+     6fe:	8c bd       	out	0x2c, r24	; 44
+     700:	08 95       	ret
+
+00000702 <_ZN8SPIClass11setBitOrderEh>:
+}
+
+void SPIClass::setBitOrder(uint8_t bitOrder)
+{
+  if(bitOrder == LSBFIRST) {
+     702:	81 11       	cpse	r24, r1
+     704:	04 c0       	rjmp	.+8      	; 0x70e <_ZN8SPIClass11setBitOrderEh+0xc>
+    SPCR |= _BV(DORD);
+     706:	8c b5       	in	r24, 0x2c	; 44
+     708:	80 62       	ori	r24, 0x20	; 32
+     70a:	8c bd       	out	0x2c, r24	; 44
+     70c:	08 95       	ret
+  } else {
+    SPCR &= ~(_BV(DORD));
+     70e:	8c b5       	in	r24, 0x2c	; 44
+     710:	8f 7d       	andi	r24, 0xDF	; 223
+     712:	8c bd       	out	0x2c, r24	; 44
+     714:	08 95       	ret
+
+00000716 <_ZN8SPIClass11setDataModeEh>:
+  }
+}
+
+void SPIClass::setDataMode(uint8_t mode)
+{
+  SPCR = (SPCR & ~SPI_MODE_MASK) | mode;
+     716:	9c b5       	in	r25, 0x2c	; 44
+     718:	93 7f       	andi	r25, 0xF3	; 243
+     71a:	89 2b       	or	r24, r25
+     71c:	8c bd       	out	0x2c, r24	; 44
+     71e:	08 95       	ret
+
+00000720 <_ZN8SPIClass15setClockDividerEh>:
+}
+
+void SPIClass::setClockDivider(uint8_t rate)
+{
+  SPCR = (SPCR & ~SPI_CLOCK_MASK) | (rate & SPI_CLOCK_MASK);
+     720:	9c b5       	in	r25, 0x2c	; 44
+     722:	28 2f       	mov	r18, r24
+     724:	23 70       	andi	r18, 0x03	; 3
+     726:	9c 7f       	andi	r25, 0xFC	; 252
+     728:	92 2b       	or	r25, r18
+     72a:	9c bd       	out	0x2c, r25	; 44
+  SPSR = (SPSR & ~SPI_2XCLOCK_MASK) | ((rate >> 2) & SPI_2XCLOCK_MASK);
+     72c:	2d b5       	in	r18, 0x2d	; 45
+     72e:	82 fb       	bst	r24, 2
+     730:	99 27       	eor	r25, r25
+     732:	90 f9       	bld	r25, 0
+     734:	82 2f       	mov	r24, r18
+     736:	8e 7f       	andi	r24, 0xFE	; 254
+     738:	89 2b       	or	r24, r25
+     73a:	8d bd       	out	0x2d, r24	; 45
+     73c:	08 95       	ret
+
+0000073e <_Z34acil_encode_cmd_get_device_versionPh>:
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_SLEEP;
+}
+
+void acil_encode_cmd_get_device_version(uint8_t *buffer)
+{
+  *(buffer + OFFSET_ACI_CMD_T_LEN) = 1;
+     73e:	21 e0       	ldi	r18, 0x01	; 1
+     740:	fc 01       	movw	r30, r24
+     742:	20 83       	st	Z, r18
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_GET_DEVICE_VERSION;
+     744:	29 e0       	ldi	r18, 0x09	; 9
+     746:	21 83       	std	Z+1, r18	; 0x01
+     748:	08 95       	ret
+
+0000074a <_Z30acil_encode_cmd_set_local_dataPhP31aci_cmd_params_set_local_data_th>:
+}
+
+void acil_encode_cmd_set_local_data(uint8_t *buffer, aci_cmd_params_set_local_data_t *p_aci_cmd_params_set_local_data, uint8_t data_size)
+{
+  *(buffer + OFFSET_ACI_CMD_T_LEN) = MSG_SET_LOCAL_DATA_BASE_LEN + data_size;
+     74a:	22 e0       	ldi	r18, 0x02	; 2
+     74c:	24 0f       	add	r18, r20
+     74e:	dc 01       	movw	r26, r24
+     750:	2c 93       	st	X, r18
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_SET_LOCAL_DATA;
+     752:	2d e0       	ldi	r18, 0x0D	; 13
+     754:	11 96       	adiw	r26, 0x01	; 1
+     756:	2c 93       	st	X, r18
+     758:	11 97       	sbiw	r26, 0x01	; 1
+  *(buffer + OFFSET_ACI_CMD_T_SET_LOCAL_DATA + OFFSET_ACI_CMD_PARAMS_SEND_DATA_T_TX_DATA + OFFSET_ACI_TX_DATA_T_PIPE_NUMBER) = p_aci_cmd_params_set_local_data->tx_data.pipe_number;
+     75a:	e6 2f       	mov	r30, r22
+     75c:	f7 2f       	mov	r31, r23
+     75e:	21 91       	ld	r18, Z+
+     760:	12 96       	adiw	r26, 0x02	; 2
+     762:	2c 93       	st	X, r18
+  memcpy(buffer + OFFSET_ACI_CMD_T_SET_LOCAL_DATA + OFFSET_ACI_CMD_PARAMS_SEND_DATA_T_TX_DATA + OFFSET_ACI_TX_DATA_T_ACI_DATA,  &(p_aci_cmd_params_set_local_data->tx_data.aci_data[0]), data_size);
+     764:	50 e0       	ldi	r21, 0x00	; 0
+     766:	bf 01       	movw	r22, r30
+     768:	03 96       	adiw	r24, 0x03	; 3
+     76a:	0e 94 17 08 	call	0x102e	; 0x102e <memcpy>
+     76e:	08 95       	ret
+
+00000770 <_Z23acil_encode_cmd_connectPhP24aci_cmd_params_connect_t>:
+}
+
+void acil_encode_cmd_connect(uint8_t *buffer, aci_cmd_params_connect_t *p_aci_cmd_params_connect)
+{
+     770:	fc 01       	movw	r30, r24
+     772:	db 01       	movw	r26, r22
+  *(buffer + OFFSET_ACI_CMD_T_LEN) = MSG_CONNECT_LEN;
+     774:	85 e0       	ldi	r24, 0x05	; 5
+     776:	80 83       	st	Z, r24
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_CONNECT;
+     778:	8f e0       	ldi	r24, 0x0F	; 15
+     77a:	81 83       	std	Z+1, r24	; 0x01
+  *(buffer + OFFSET_ACI_CMD_T_CONNECT + OFFSET_ACI_CMD_PARAMS_CONNECT_T_TIMEOUT_MSB) = (uint8_t)(p_aci_cmd_params_connect->timeout >> 8);
+     77c:	11 96       	adiw	r26, 0x01	; 1
+     77e:	8c 91       	ld	r24, X
+     780:	11 97       	sbiw	r26, 0x01	; 1
+     782:	83 83       	std	Z+3, r24	; 0x03
+  *(buffer + OFFSET_ACI_CMD_T_CONNECT + OFFSET_ACI_CMD_PARAMS_CONNECT_T_TIMEOUT_LSB) = (uint8_t)(p_aci_cmd_params_connect->timeout);
+     784:	8c 91       	ld	r24, X
+     786:	82 83       	std	Z+2, r24	; 0x02
+  *(buffer + OFFSET_ACI_CMD_T_CONNECT + OFFSET_ACI_CMD_PARAMS_CONNECT_T_ADV_INTERVAL_MSB) = (uint8_t)(p_aci_cmd_params_connect->adv_interval >> 8);
+     788:	13 96       	adiw	r26, 0x03	; 3
+     78a:	8c 91       	ld	r24, X
+     78c:	13 97       	sbiw	r26, 0x03	; 3
+     78e:	85 83       	std	Z+5, r24	; 0x05
+  *(buffer + OFFSET_ACI_CMD_T_CONNECT + OFFSET_ACI_CMD_PARAMS_CONNECT_T_ADV_INTERVAL_LSB) = (uint8_t)(p_aci_cmd_params_connect->adv_interval);
+     790:	12 96       	adiw	r26, 0x02	; 2
+     792:	8c 91       	ld	r24, X
+     794:	84 83       	std	Z+4, r24	; 0x04
+     796:	08 95       	ret
+
+00000798 <_Z25acil_encode_cmd_send_dataPhP26aci_cmd_params_send_data_th>:
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_GET_DEVICE_ADDRESS;
+}
+
+void acil_encode_cmd_send_data(uint8_t *buffer, aci_cmd_params_send_data_t *p_aci_cmd_params_send_data_t, uint8_t data_size)
+{
+  *(buffer + OFFSET_ACI_CMD_T_LEN) = MSG_SEND_DATA_BASE_LEN + data_size;
+     798:	22 e0       	ldi	r18, 0x02	; 2
+     79a:	24 0f       	add	r18, r20
+     79c:	dc 01       	movw	r26, r24
+     79e:	2c 93       	st	X, r18
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_SEND_DATA;
+     7a0:	25 e1       	ldi	r18, 0x15	; 21
+     7a2:	11 96       	adiw	r26, 0x01	; 1
+     7a4:	2c 93       	st	X, r18
+     7a6:	11 97       	sbiw	r26, 0x01	; 1
+  *(buffer + OFFSET_ACI_CMD_T_SEND_DATA + OFFSET_ACI_CMD_PARAMS_SEND_DATA_T_TX_DATA + OFFSET_ACI_TX_DATA_T_PIPE_NUMBER) = p_aci_cmd_params_send_data_t->tx_data.pipe_number;
+     7a8:	e6 2f       	mov	r30, r22
+     7aa:	f7 2f       	mov	r31, r23
+     7ac:	21 91       	ld	r18, Z+
+     7ae:	12 96       	adiw	r26, 0x02	; 2
+     7b0:	2c 93       	st	X, r18
+  memcpy((buffer + OFFSET_ACI_CMD_T_SEND_DATA + OFFSET_ACI_CMD_PARAMS_SEND_DATA_T_TX_DATA + OFFSET_ACI_TX_DATA_T_ACI_DATA), &(p_aci_cmd_params_send_data_t->tx_data.aci_data[0]), data_size);
+     7b2:	50 e0       	ldi	r21, 0x00	; 0
+     7b4:	bf 01       	movw	r22, r30
+     7b6:	03 96       	adiw	r24, 0x03	; 3
+     7b8:	0e 94 17 08 	call	0x102e	; 0x102e <memcpy>
+     7bc:	08 95       	ret
+
+000007be <_Z42acil_encode_cmd_change_timing_req_GAP_PPCPPh>:
+  *(buffer + OFFSET_ACI_CMD_T_SET_APP_LATENCY + OFFSET_ACI_CMD_PARAMS_SET_APP_LATENCY_T_LATENCY_LSB) = (uint8_t)( p_aci_cmd_params_set_app_latency->latency);
+}
+
+void acil_encode_cmd_change_timing_req_GAP_PPCP(uint8_t *buffer)
+{
+  *(buffer + OFFSET_ACI_CMD_T_LEN) = MSG_CHANGE_TIMING_LEN_GAP_PPCP;
+     7be:	21 e0       	ldi	r18, 0x01	; 1
+     7c0:	fc 01       	movw	r30, r24
+     7c2:	20 83       	st	Z, r18
+  *(buffer + OFFSET_ACI_CMD_T_CMD_OPCODE) = ACI_CMD_CHANGE_TIMING;
+     7c4:	23 e1       	ldi	r18, 0x13	; 19
+     7c6:	21 83       	std	Z+1, r18	; 0x01
+     7c8:	08 95       	ret
+
+000007ca <_Z9aci_setupP11aci_state_thh>:
+
+static hal_aci_evt_t  aci_data;
+static hal_aci_data_t aci_cmd;
+
+aci_status_code_t aci_setup(aci_state_t *aci_stat, uint8_t num_cmds, uint8_t num_cmd_offset)
+{
+     7ca:	cf 92       	push	r12
+     7cc:	df 92       	push	r13
+     7ce:	ef 92       	push	r14
+     7d0:	ff 92       	push	r15
+     7d2:	0f 93       	push	r16
+     7d4:	1f 93       	push	r17
+     7d6:	cf 93       	push	r28
+     7d8:	df 93       	push	r29
+     7da:	8c 01       	movw	r16, r24
+     7dc:	f6 2e       	mov	r15, r22
+  uint8_t i = 0;
+  uint8_t evt_count = 0;
+  aci_evt_t * aci_evt = NULL;
+  
+  while (i < num_cmds)
+     7de:	66 23       	and	r22, r22
+     7e0:	f1 f0       	breq	.+60     	; 0x81e <_Z9aci_setupP11aci_state_thh+0x54>
+     7e2:	81 e2       	ldi	r24, 0x21	; 33
+     7e4:	48 9f       	mul	r20, r24
+     7e6:	e0 01       	movw	r28, r0
+     7e8:	11 24       	eor	r1, r1
+static hal_aci_evt_t  aci_data;
+static hal_aci_data_t aci_cmd;
+
+aci_status_code_t aci_setup(aci_state_t *aci_stat, uint8_t num_cmds, uint8_t num_cmd_offset)
+{
+  uint8_t i = 0;
+     7ea:	d1 2c       	mov	r13, r1
+  while (i < num_cmds)
+  {
+    //Copy the setup ACI message from Flash to RAM
+    //Add 2 bytes to the length byte for status byte, length for the total number of bytes
+    memcpy_P(&aci_cmd, &(aci_stat->aci_setup_info.setup_msgs[num_cmd_offset+i]), 
+              pgm_read_byte_near(&(aci_stat->aci_setup_info.setup_msgs[num_cmd_offset+i].buffer[0]))+2); 
+     7ec:	f8 01       	movw	r30, r16
+     7ee:	63 81       	ldd	r22, Z+3	; 0x03
+     7f0:	74 81       	ldd	r23, Z+4	; 0x04
+     7f2:	6c 0f       	add	r22, r28
+     7f4:	7d 1f       	adc	r23, r29
+     7f6:	fb 01       	movw	r30, r22
+     7f8:	31 96       	adiw	r30, 0x01	; 1
+     7fa:	44 91       	lpm	r20, Z
+     7fc:	50 e0       	ldi	r21, 0x00	; 0
+     7fe:	4e 5f       	subi	r20, 0xFE	; 254
+     800:	5f 4f       	sbci	r21, 0xFF	; 255
+     802:	88 eb       	ldi	r24, 0xB8	; 184
+     804:	91 e0       	ldi	r25, 0x01	; 1
+     806:	0e 94 0e 08 	call	0x101c	; 0x101c <memcpy_P>
+    
+    //Put the Setup ACI message in the command queue
+    if (!hal_aci_tl_send(&aci_cmd))
+     80a:	88 eb       	ldi	r24, 0xB8	; 184
+     80c:	91 e0       	ldi	r25, 0x01	; 1
+     80e:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+     812:	88 23       	and	r24, r24
+     814:	09 f1       	breq	.+66     	; 0x858 <_Z9aci_setupP11aci_state_thh+0x8e>
+        //Debug messages:
+        //Serial.print(F("Setup msg"));
+        //Serial.println(i, DEC);
+    }
+    
+    i++;
+     816:	d3 94       	inc	r13
+     818:	a1 96       	adiw	r28, 0x21	; 33
+{
+  uint8_t i = 0;
+  uint8_t evt_count = 0;
+  aci_evt_t * aci_evt = NULL;
+  
+  while (i < num_cmds)
+     81a:	df 10       	cpse	r13, r15
+     81c:	e7 cf       	rjmp	.-50     	; 0x7ec <_Z9aci_setupP11aci_state_thh+0x22>
+static hal_aci_evt_t  aci_data;
+static hal_aci_data_t aci_cmd;
+
+aci_status_code_t aci_setup(aci_state_t *aci_stat, uint8_t num_cmds, uint8_t num_cmd_offset)
+{
+  uint8_t i = 0;
+     81e:	e1 2c       	mov	r14, r1
+    {
+      aci_evt = &aci_data.evt;
+      
+      evt_count++;
+  
+      if (ACI_EVT_CMD_RSP != aci_evt->evt_opcode )
+     820:	cb ed       	ldi	r28, 0xDB	; 219
+     822:	d1 e0       	ldi	r29, 0x01	; 1
+        //Got something other than a command response evt -> Error
+        return ACI_STATUS_ERROR_INTERNAL;
+      }
+      
+      if (!((ACI_STATUS_TRANSACTION_CONTINUE == aci_evt->params.cmd_rsp.cmd_status) || 
+           (ACI_STATUS_TRANSACTION_COMPLETE == aci_evt->params.cmd_rsp.cmd_status)))
+     824:	0f 2e       	mov	r0, r31
+     826:	fd ed       	ldi	r31, 0xDD	; 221
+     828:	cf 2e       	mov	r12, r31
+     82a:	f1 e0       	ldi	r31, 0x01	; 1
+     82c:	df 2e       	mov	r13, r31
+     82e:	f0 2d       	mov	r31, r0
+  while (1)
+  {
+    //We will sit here if we do not get the same number of command response evts as the commands sent to the ACI
+    //
+    //@check The setup wil fail in the while(1) below when the 32KHz source for the nRF8001 is in-correct in the setup generated in the nRFgo studio
+    if (true == lib_aci_event_get(aci_stat, &aci_data))
+     830:	69 ed       	ldi	r22, 0xD9	; 217
+     832:	71 e0       	ldi	r23, 0x01	; 1
+     834:	c8 01       	movw	r24, r16
+     836:	0e 94 c7 07 	call	0xf8e	; 0xf8e <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t>
+     83a:	88 23       	and	r24, r24
+     83c:	c9 f3       	breq	.-14     	; 0x830 <_Z9aci_setupP11aci_state_thh+0x66>
+    {
+      aci_evt = &aci_data.evt;
+      
+      evt_count++;
+     83e:	e3 94       	inc	r14
+  
+      if (ACI_EVT_CMD_RSP != aci_evt->evt_opcode )
+     840:	88 81       	ld	r24, Y
+     842:	84 38       	cpi	r24, 0x84	; 132
+     844:	59 f4       	brne	.+22     	; 0x85c <_Z9aci_setupP11aci_state_thh+0x92>
+        //Got something other than a command response evt -> Error
+        return ACI_STATUS_ERROR_INTERNAL;
+      }
+      
+      if (!((ACI_STATUS_TRANSACTION_CONTINUE == aci_evt->params.cmd_rsp.cmd_status) || 
+           (ACI_STATUS_TRANSACTION_COMPLETE == aci_evt->params.cmd_rsp.cmd_status)))
+     846:	f6 01       	movw	r30, r12
+     848:	80 81       	ld	r24, Z
+     84a:	9f ef       	ldi	r25, 0xFF	; 255
+     84c:	98 0f       	add	r25, r24
+      {
+        //Got something other than a command response evt -> Error
+        return ACI_STATUS_ERROR_INTERNAL;
+      }
+      
+      if (!((ACI_STATUS_TRANSACTION_CONTINUE == aci_evt->params.cmd_rsp.cmd_status) || 
+     84e:	92 30       	cpi	r25, 0x02	; 2
+     850:	30 f4       	brcc	.+12     	; 0x85e <_Z9aci_setupP11aci_state_thh+0x94>
+      {
+        //Serial.print(F("Cmd Response Evt "));
+        //Serial.println(evt_count);
+      }
+      
+      if (num_cmds == evt_count)
+     852:	fe 10       	cpse	r15, r14
+     854:	ed cf       	rjmp	.-38     	; 0x830 <_Z9aci_setupP11aci_state_thh+0x66>
+     856:	03 c0       	rjmp	.+6      	; 0x85e <_Z9aci_setupP11aci_state_thh+0x94>
+    
+    //Put the Setup ACI message in the command queue
+    if (!hal_aci_tl_send(&aci_cmd))
+    {
+      //Serial.println(F("Cmd Queue Full"));
+      return ACI_STATUS_ERROR_INTERNAL;
+     858:	81 e8       	ldi	r24, 0x81	; 129
+     85a:	01 c0       	rjmp	.+2      	; 0x85e <_Z9aci_setupP11aci_state_thh+0x94>
+      evt_count++;
+  
+      if (ACI_EVT_CMD_RSP != aci_evt->evt_opcode )
+      {
+        //Got something other than a command response evt -> Error
+        return ACI_STATUS_ERROR_INTERNAL;
+     85c:	81 e8       	ldi	r24, 0x81	; 129
+	       
+    }	
+  }
+  
+  return ((aci_status_code_t)aci_evt->params.cmd_rsp.cmd_status);              
+}
+     85e:	df 91       	pop	r29
+     860:	cf 91       	pop	r28
+     862:	1f 91       	pop	r17
+     864:	0f 91       	pop	r16
+     866:	ff 90       	pop	r15
+     868:	ef 90       	pop	r14
+     86a:	df 90       	pop	r13
+     86c:	cf 90       	pop	r12
+     86e:	08 95       	ret
+
+00000870 <_Z12do_aci_setupP11aci_state_t>:
+
+
+aci_status_code_t do_aci_setup(aci_state_t *aci_stat)
+{
+     870:	0f 93       	push	r16
+     872:	1f 93       	push	r17
+     874:	cf 93       	push	r28
+     876:	df 93       	push	r29
+     878:	ec 01       	movw	r28, r24
+  aci_status_code_t status = ACI_STATUS_ERROR_CRC_MISMATCH;
+  uint8_t i=0;
+
+  if(ACI_QUEUE_SIZE >= aci_stat->aci_setup_info.num_setup_msgs)
+     87a:	6d 81       	ldd	r22, Y+5	; 0x05
+     87c:	69 30       	cpi	r22, 0x09	; 9
+     87e:	28 f0       	brcs	.+10     	; 0x88a <_Z12do_aci_setupP11aci_state_t+0x1a>
+  {
+    status = aci_setup(aci_stat, aci_stat->aci_setup_info.num_setup_msgs, 0);
+  }
+  else
+  {
+    for(i=0; i<(aci_stat->aci_setup_info.num_setup_msgs/ACI_QUEUE_SIZE); i++)
+     880:	68 30       	cpi	r22, 0x08	; 8
+     882:	38 f4       	brcc	.+14     	; 0x892 <_Z12do_aci_setupP11aci_state_t+0x22>
+     884:	10 e0       	ldi	r17, 0x00	; 0
+     886:	88 e8       	ldi	r24, 0x88	; 136
+     888:	14 c0       	rjmp	.+40     	; 0x8b2 <_Z12do_aci_setupP11aci_state_t+0x42>
+  aci_status_code_t status = ACI_STATUS_ERROR_CRC_MISMATCH;
+  uint8_t i=0;
+
+  if(ACI_QUEUE_SIZE >= aci_stat->aci_setup_info.num_setup_msgs)
+  {
+    status = aci_setup(aci_stat, aci_stat->aci_setup_info.num_setup_msgs, 0);
+     88a:	40 e0       	ldi	r20, 0x00	; 0
+     88c:	0e 94 e5 03 	call	0x7ca	; 0x7ca <_Z9aci_setupP11aci_state_thh>
+     890:	19 c0       	rjmp	.+50     	; 0x8c4 <_Z12do_aci_setupP11aci_state_t+0x54>
+  }
+  else
+  {
+    for(i=0; i<(aci_stat->aci_setup_info.num_setup_msgs/ACI_QUEUE_SIZE); i++)
+     892:	00 e0       	ldi	r16, 0x00	; 0
+     894:	10 e0       	ldi	r17, 0x00	; 0
+    {
+      //Serial.print(ACI_QUEUE_SIZE, DEC);
+      //Serial.print(F(" "));
+      //Serial.println(0+(ACI_QUEUE_SIZE*i), DEC);
+      status = aci_setup(aci_stat, ACI_QUEUE_SIZE, (ACI_QUEUE_SIZE*i));
+     896:	40 2f       	mov	r20, r16
+     898:	68 e0       	ldi	r22, 0x08	; 8
+     89a:	ce 01       	movw	r24, r28
+     89c:	0e 94 e5 03 	call	0x7ca	; 0x7ca <_Z9aci_setupP11aci_state_thh>
+  {
+    status = aci_setup(aci_stat, aci_stat->aci_setup_info.num_setup_msgs, 0);
+  }
+  else
+  {
+    for(i=0; i<(aci_stat->aci_setup_info.num_setup_msgs/ACI_QUEUE_SIZE); i++)
+     8a0:	1f 5f       	subi	r17, 0xFF	; 255
+     8a2:	6d 81       	ldd	r22, Y+5	; 0x05
+     8a4:	08 5f       	subi	r16, 0xF8	; 248
+     8a6:	96 2f       	mov	r25, r22
+     8a8:	96 95       	lsr	r25
+     8aa:	96 95       	lsr	r25
+     8ac:	96 95       	lsr	r25
+     8ae:	19 17       	cp	r17, r25
+     8b0:	90 f3       	brcs	.-28     	; 0x896 <_Z12do_aci_setupP11aci_state_t+0x26>
+      //Serial.print(ACI_QUEUE_SIZE, DEC);
+      //Serial.print(F(" "));
+      //Serial.println(0+(ACI_QUEUE_SIZE*i), DEC);
+      status = aci_setup(aci_stat, ACI_QUEUE_SIZE, (ACI_QUEUE_SIZE*i));
+    }
+    if ((aci_stat->aci_setup_info.num_setup_msgs % ACI_QUEUE_SIZE) != 0)
+     8b2:	67 70       	andi	r22, 0x07	; 7
+     8b4:	39 f0       	breq	.+14     	; 0x8c4 <_Z12do_aci_setupP11aci_state_t+0x54>
+    {
+     status = aci_setup(aci_stat, aci_stat->aci_setup_info.num_setup_msgs % ACI_QUEUE_SIZE, (ACI_QUEUE_SIZE*i));               
+     8b6:	41 2f       	mov	r20, r17
+     8b8:	44 0f       	add	r20, r20
+     8ba:	44 0f       	add	r20, r20
+     8bc:	44 0f       	add	r20, r20
+     8be:	ce 01       	movw	r24, r28
+     8c0:	0e 94 e5 03 	call	0x7ca	; 0x7ca <_Z9aci_setupP11aci_state_thh>
+    }
+  }
+
+  return status;
+}
+     8c4:	df 91       	pop	r29
+     8c6:	cf 91       	pop	r28
+     8c8:	1f 91       	pop	r17
+     8ca:	0f 91       	pop	r16
+     8cc:	08 95       	ret
+
+000008ce <_ZL12m_aci_q_initP11aci_queue_t>:
+
+static void m_aci_q_init(aci_queue_t *aci_q)
+{
+  uint8_t loop;
+  
+  aci_debug_print = false;
+     8ce:	10 92 0f 04 	sts	0x040F, r1
+  aci_q->head = 0;
+     8d2:	fc 01       	movw	r30, r24
+     8d4:	e8 5f       	subi	r30, 0xF8	; 248
+     8d6:	fe 4f       	sbci	r31, 0xFE	; 254
+     8d8:	10 82       	st	Z, r1
+  aci_q->tail = 0;
+     8da:	31 96       	adiw	r30, 0x01	; 1
+     8dc:	10 82       	st	Z, r1
+     8de:	e7 e0       	ldi	r30, 0x07	; 7
+     8e0:	f3 e0       	ldi	r31, 0x03	; 3
+     8e2:	8f e0       	ldi	r24, 0x0F	; 15
+     8e4:	94 e0       	ldi	r25, 0x04	; 4
+     8e6:	df 01       	movw	r26, r30
+     8e8:	11 97       	sbiw	r26, 0x01	; 1
+  for(loop=0; loop<ACI_QUEUE_SIZE; loop++)
+  {
+    aci_tx_q.aci_data[loop].buffer[0] = 0x00;
+     8ea:	1c 92       	st	X, r1
+    aci_tx_q.aci_data[loop].buffer[1] = 0x00;
+     8ec:	10 82       	st	Z, r1
+     8ee:	b1 96       	adiw	r30, 0x21	; 33
+  uint8_t loop;
+  
+  aci_debug_print = false;
+  aci_q->head = 0;
+  aci_q->tail = 0;
+  for(loop=0; loop<ACI_QUEUE_SIZE; loop++)
+     8f0:	e8 17       	cp	r30, r24
+     8f2:	f9 07       	cpc	r31, r25
+     8f4:	c1 f7       	brne	.-16     	; 0x8e6 <_ZL12m_aci_q_initP11aci_queue_t+0x18>
+  {
+    aci_tx_q.aci_data[loop].buffer[0] = 0x00;
+    aci_tx_q.aci_data[loop].buffer[1] = 0x00;
+  }
+}
+     8f6:	08 95       	ret
+
+000008f8 <_ZL15m_aci_q_is_fullP11aci_queue_t>:
+{
+  uint8_t next;
+  bool state;
+  
+  //This should be done in a critical section
+  cli() ; //noInterrupts();
+     8f8:	f8 94       	cli
+  next = (aci_q->tail + 1) % ACI_QUEUE_SIZE;  
+     8fa:	fc 01       	movw	r30, r24
+     8fc:	e7 5f       	subi	r30, 0xF7	; 247
+     8fe:	fe 4f       	sbci	r31, 0xFE	; 254
+     900:	20 81       	ld	r18, Z
+     902:	30 e0       	ldi	r19, 0x00	; 0
+     904:	2f 5f       	subi	r18, 0xFF	; 255
+     906:	3f 4f       	sbci	r19, 0xFF	; 255
+     908:	27 70       	andi	r18, 0x07	; 7
+     90a:	30 78       	andi	r19, 0x80	; 128
+  
+  if (next == aci_q->head)
+     90c:	31 97       	sbiw	r30, 0x01	; 1
+     90e:	81 e0       	ldi	r24, 0x01	; 1
+     910:	90 81       	ld	r25, Z
+     912:	92 13       	cpse	r25, r18
+     914:	80 e0       	ldi	r24, 0x00	; 0
+  else
+  {
+    state = false;
+  }
+  
+  sei(); //interrupts();
+     916:	78 94       	sei
+  //end
+  
+  return state;
+}
+     918:	08 95       	ret
+
+0000091a <_ZL15m_aci_q_enqueueP11aci_queue_tP14hal_aci_data_t>:
+{
+	aci_debug_print = enable;
+}
+
+static bool m_aci_q_enqueue(aci_queue_t *aci_q, hal_aci_data_t *p_data)
+{
+     91a:	0f 93       	push	r16
+     91c:	1f 93       	push	r17
+     91e:	cf 93       	push	r28
+     920:	df 93       	push	r29
+     922:	ec 01       	movw	r28, r24
+  const uint8_t next = (aci_q->tail + 1) % ACI_QUEUE_SIZE;
+     924:	fc 01       	movw	r30, r24
+     926:	e7 5f       	subi	r30, 0xF7	; 247
+     928:	fe 4f       	sbci	r31, 0xFE	; 254
+     92a:	20 81       	ld	r18, Z
+     92c:	30 e0       	ldi	r19, 0x00	; 0
+     92e:	89 01       	movw	r16, r18
+     930:	0f 5f       	subi	r16, 0xFF	; 255
+     932:	1f 4f       	sbci	r17, 0xFF	; 255
+     934:	07 70       	andi	r16, 0x07	; 7
+     936:	10 78       	andi	r17, 0x80	; 128
+  const uint8_t length = p_data->buffer[0];
+     938:	fb 01       	movw	r30, r22
+     93a:	41 81       	ldd	r20, Z+1	; 0x01
+  
+  if (next == aci_q->head)
+     93c:	fc 01       	movw	r30, r24
+     93e:	e8 5f       	subi	r30, 0xF8	; 248
+     940:	fe 4f       	sbci	r31, 0xFE	; 254
+     942:	80 81       	ld	r24, Z
+     944:	80 17       	cp	r24, r16
+     946:	c9 f0       	breq	.+50     	; 0x97a <_ZL15m_aci_q_enqueueP11aci_queue_tP14hal_aci_data_t+0x60>
+  {
+    /* full queue */
+    return false;
+  }
+  aci_q->aci_data[aci_q->tail].status_byte = 0;
+     948:	51 e2       	ldi	r21, 0x21	; 33
+     94a:	52 9f       	mul	r21, r18
+     94c:	c0 01       	movw	r24, r0
+     94e:	53 9f       	mul	r21, r19
+     950:	90 0d       	add	r25, r0
+     952:	11 24       	eor	r1, r1
+     954:	fe 01       	movw	r30, r28
+     956:	e8 0f       	add	r30, r24
+     958:	f9 1f       	adc	r31, r25
+     95a:	10 82       	st	Z, r1
+  
+  memcpy((uint8_t *)&(aci_q->aci_data[aci_q->tail].buffer[0]), (uint8_t *)&p_data->buffer[0], length + 1);
+     95c:	01 96       	adiw	r24, 0x01	; 1
+     95e:	50 e0       	ldi	r21, 0x00	; 0
+     960:	4f 5f       	subi	r20, 0xFF	; 255
+     962:	5f 4f       	sbci	r21, 0xFF	; 255
+     964:	6f 5f       	subi	r22, 0xFF	; 255
+     966:	7f 4f       	sbci	r23, 0xFF	; 255
+     968:	8c 0f       	add	r24, r28
+     96a:	9d 1f       	adc	r25, r29
+     96c:	0e 94 17 08 	call	0x102e	; 0x102e <memcpy>
+  aci_q->tail = next;
+     970:	c7 5f       	subi	r28, 0xF7	; 247
+     972:	de 4f       	sbci	r29, 0xFE	; 254
+     974:	08 83       	st	Y, r16
+  
+  return true;
+     976:	81 e0       	ldi	r24, 0x01	; 1
+     978:	01 c0       	rjmp	.+2      	; 0x97c <_ZL15m_aci_q_enqueueP11aci_queue_tP14hal_aci_data_t+0x62>
+  const uint8_t length = p_data->buffer[0];
+  
+  if (next == aci_q->head)
+  {
+    /* full queue */
+    return false;
+     97a:	80 e0       	ldi	r24, 0x00	; 0
+  
+  memcpy((uint8_t *)&(aci_q->aci_data[aci_q->tail].buffer[0]), (uint8_t *)&p_data->buffer[0], length + 1);
+  aci_q->tail = next;
+  
+  return true;
+}
+     97c:	df 91       	pop	r29
+     97e:	cf 91       	pop	r28
+     980:	1f 91       	pop	r17
+     982:	0f 91       	pop	r16
+     984:	08 95       	ret
+
+00000986 <_Z12toggle_eimskb>:
+{
+  /* ToDo: This will currently only work with the UNO/ATMega48/88/128/328 */
+  /*       due to EIMSK. Abstract this away to something MCU nuetral! */
+  uint8_t eimsk_bit = 0xFF;
+  for (uint8_t i=0; i<sizeof(dreqinttable); i+=2) {
+    if (HAL_IO_RADIO_RDY == dreqinttable[i]) {
+     986:	20 91 0b 01 	lds	r18, 0x010B
+     98a:	33 27       	eor	r19, r19
+     98c:	27 fd       	sbrc	r18, 7
+     98e:	30 95       	com	r19
+     990:	41 e0       	ldi	r20, 0x01	; 1
+     992:	22 30       	cpi	r18, 0x02	; 2
+     994:	31 05       	cpc	r19, r1
+     996:	09 f4       	brne	.+2      	; 0x99a <_Z12toggle_eimskb+0x14>
+     998:	40 e0       	ldi	r20, 0x00	; 0
+     99a:	41 95       	neg	r20
+     99c:	23 30       	cpi	r18, 0x03	; 3
+     99e:	31 05       	cpc	r19, r1
+     9a0:	19 f0       	breq	.+6      	; 0x9a8 <_Z12toggle_eimskb+0x22>
+      eimsk_bit = dreqinttable[i+1];
+    }
+  }
+  if (eimsk_bit != 0xFF) 
+     9a2:	4f 3f       	cpi	r20, 0xFF	; 255
+     9a4:	11 f4       	brne	.+4      	; 0x9aa <_Z12toggle_eimskb+0x24>
+     9a6:	1b c0       	rjmp	.+54     	; 0x9de <_Z12toggle_eimskb+0x58>
+  /* ToDo: This will currently only work with the UNO/ATMega48/88/128/328 */
+  /*       due to EIMSK. Abstract this away to something MCU nuetral! */
+  uint8_t eimsk_bit = 0xFF;
+  for (uint8_t i=0; i<sizeof(dreqinttable); i+=2) {
+    if (HAL_IO_RADIO_RDY == dreqinttable[i]) {
+      eimsk_bit = dreqinttable[i+1];
+     9a8:	41 e0       	ldi	r20, 0x01	; 1
+    }
+  }
+  if (eimsk_bit != 0xFF) 
+  {
+    if (state)
+     9aa:	88 23       	and	r24, r24
+     9ac:	61 f0       	breq	.+24     	; 0x9c6 <_Z12toggle_eimskb+0x40>
+      EIMSK |= (1 << eimsk_bit);
+     9ae:	5d b3       	in	r21, 0x1d	; 29
+     9b0:	21 e0       	ldi	r18, 0x01	; 1
+     9b2:	30 e0       	ldi	r19, 0x00	; 0
+     9b4:	c9 01       	movw	r24, r18
+     9b6:	02 c0       	rjmp	.+4      	; 0x9bc <_Z12toggle_eimskb+0x36>
+     9b8:	88 0f       	add	r24, r24
+     9ba:	99 1f       	adc	r25, r25
+     9bc:	4a 95       	dec	r20
+     9be:	e2 f7       	brpl	.-8      	; 0x9b8 <_Z12toggle_eimskb+0x32>
+     9c0:	85 2b       	or	r24, r21
+     9c2:	8d bb       	out	0x1d, r24	; 29
+     9c4:	08 95       	ret
+    else
+      EIMSK &= ~(1 << eimsk_bit);
+     9c6:	2d b3       	in	r18, 0x1d	; 29
+     9c8:	81 e0       	ldi	r24, 0x01	; 1
+     9ca:	90 e0       	ldi	r25, 0x00	; 0
+     9cc:	02 c0       	rjmp	.+4      	; 0x9d2 <_Z12toggle_eimskb+0x4c>
+     9ce:	88 0f       	add	r24, r24
+     9d0:	99 1f       	adc	r25, r25
+     9d2:	4a 95       	dec	r20
+     9d4:	e2 f7       	brpl	.-8      	; 0x9ce <_Z12toggle_eimskb+0x48>
+     9d6:	80 95       	com	r24
+     9d8:	82 23       	and	r24, r18
+     9da:	8d bb       	out	0x1d, r24	; 29
+     9dc:	08 95       	ret
+     9de:	ff cf       	rjmp	.-2      	; 0x9de <_Z12toggle_eimskb+0x58>
+
+000009e0 <_Z20hal_aci_tl_event_getP14hal_aci_data_t>:
+    }    
+  }
+}
+
+bool hal_aci_tl_event_get(hal_aci_data_t *p_aci_data)
+{
+     9e0:	cf 93       	push	r28
+     9e2:	df 93       	push	r29
+     9e4:	ec 01       	movw	r28, r24
+  bool was_full = m_aci_q_is_full(&aci_rx_q);
+     9e6:	8b ef       	ldi	r24, 0xFB	; 251
+     9e8:	91 e0       	ldi	r25, 0x01	; 1
+     9ea:	0e 94 7c 04 	call	0x8f8	; 0x8f8 <_ZL15m_aci_q_is_fullP11aci_queue_t>
+}
+
+//@comment after a port have test for the queue states, esp. the full and the empty states
+static bool m_aci_q_dequeue(aci_queue_t *aci_q, hal_aci_data_t *p_data)
+{
+  if (aci_q->head == aci_q->tail)
+     9ee:	e0 91 03 03 	lds	r30, 0x0303
+     9f2:	90 91 04 03 	lds	r25, 0x0304
+     9f6:	e9 17       	cp	r30, r25
+     9f8:	29 f1       	breq	.+74     	; 0xa44 <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x64>
+  {
+    /* empty queue */
+    return false;
+  }
+  
+  memcpy((uint8_t *)p_data, (uint8_t *)&(aci_q->aci_data[aci_q->head]), sizeof(hal_aci_data_t));
+     9fa:	91 e2       	ldi	r25, 0x21	; 33
+     9fc:	e9 9f       	mul	r30, r25
+     9fe:	f0 01       	movw	r30, r0
+     a00:	11 24       	eor	r1, r1
+     a02:	e5 50       	subi	r30, 0x05	; 5
+     a04:	fe 4f       	sbci	r31, 0xFE	; 254
+     a06:	91 e2       	ldi	r25, 0x21	; 33
+     a08:	de 01       	movw	r26, r28
+     a0a:	01 90       	ld	r0, Z+
+     a0c:	0d 92       	st	X+, r0
+     a0e:	9a 95       	dec	r25
+     a10:	e1 f7       	brne	.-8      	; 0xa0a <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x2a>
+  aci_q->head = (aci_q->head + 1) % ACI_QUEUE_SIZE;
+     a12:	e3 e0       	ldi	r30, 0x03	; 3
+     a14:	f3 e0       	ldi	r31, 0x03	; 3
+     a16:	20 81       	ld	r18, Z
+     a18:	30 e0       	ldi	r19, 0x00	; 0
+     a1a:	2f 5f       	subi	r18, 0xFF	; 255
+     a1c:	3f 4f       	sbci	r19, 0xFF	; 255
+     a1e:	27 70       	andi	r18, 0x07	; 7
+     a20:	30 78       	andi	r19, 0x80	; 128
+     a22:	20 83       	st	Z, r18
+{
+  bool was_full = m_aci_q_is_full(&aci_rx_q);
+  
+  if (m_aci_q_dequeue(&aci_rx_q, p_aci_data))
+  {
+    if (true == aci_debug_print)
+     a24:	90 91 0f 04 	lds	r25, 0x040F
+     a28:	99 23       	and	r25, r25
+     a2a:	29 f0       	breq	.+10     	; 0xa36 <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x56>
+
+
+
+void m_print_aci_data(hal_aci_data_t *p_data)
+{
+  const uint8_t length = p_data->buffer[0];
+     a2c:	29 81       	ldd	r18, Y+1	; 0x01
+  uint8_t i;
+  //Serial.print(length, DEC);
+  //Serial.print(" :");
+  for (i=0; i<=length; i++)
+     a2e:	90 e0       	ldi	r25, 0x00	; 0
+     a30:	9f 5f       	subi	r25, 0xFF	; 255
+     a32:	29 17       	cp	r18, r25
+     a34:	e8 f7       	brcc	.-6      	; 0xa30 <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x50>
+    {
+      //Serial.print(" E");
+      m_print_aci_data(p_aci_data);
+    }
+    
+    if (was_full)
+     a36:	88 23       	and	r24, r24
+     a38:	39 f0       	breq	.+14     	; 0xa48 <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x68>
+    {
+      toggle_eimsk(true);
+     a3a:	81 e0       	ldi	r24, 0x01	; 1
+     a3c:	0e 94 c3 04 	call	0x986	; 0x986 <_Z12toggle_eimskb>
+    }
+    return true;
+     a40:	81 e0       	ldi	r24, 0x01	; 1
+     a42:	03 c0       	rjmp	.+6      	; 0xa4a <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x6a>
+  }
+  else
+  {
+    return false;
+     a44:	80 e0       	ldi	r24, 0x00	; 0
+     a46:	01 c0       	rjmp	.+2      	; 0xa4a <_Z20hal_aci_tl_event_getP14hal_aci_data_t+0x6a>
+    
+    if (was_full)
+    {
+      toggle_eimsk(true);
+    }
+    return true;
+     a48:	81 e0       	ldi	r24, 0x01	; 1
+  }
+  else
+  {
+    return false;
+  }
+}
+     a4a:	df 91       	pop	r29
+     a4c:	cf 91       	pop	r28
+     a4e:	08 95       	ret
+
+00000a50 <_Z15hal_aci_tl_initv>:
+
+void hal_aci_tl_init()
+{
+  received_data.buffer[0] = 0;
+     a50:	10 92 11 04 	sts	0x0411, r1
+
+  SPI.begin();
+     a54:	0e 94 72 03 	call	0x6e4	; 0x6e4 <_ZN8SPIClass5beginEv>
+  SPI.setBitOrder(LSBFIRST);
+     a58:	80 e0       	ldi	r24, 0x00	; 0
+     a5a:	0e 94 81 03 	call	0x702	; 0x702 <_ZN8SPIClass11setBitOrderEh>
+  SPI.setClockDivider(SPI_CLOCK_DIV8);
+     a5e:	85 e0       	ldi	r24, 0x05	; 5
+     a60:	0e 94 90 03 	call	0x720	; 0x720 <_ZN8SPIClass15setClockDividerEh>
+  SPI.setDataMode(SPI_MODE0);
+     a64:	80 e0       	ldi	r24, 0x00	; 0
+     a66:	0e 94 8b 03 	call	0x716	; 0x716 <_ZN8SPIClass11setDataModeEh>
+
+
+  
+  /* initialize aci cmd queue */
+  m_aci_q_init(&aci_tx_q);  
+     a6a:	85 e0       	ldi	r24, 0x05	; 5
+     a6c:	93 e0       	ldi	r25, 0x03	; 3
+     a6e:	0e 94 67 04 	call	0x8ce	; 0x8ce <_ZL12m_aci_q_initP11aci_queue_t>
+  m_aci_q_init(&aci_rx_q);
+     a72:	8b ef       	ldi	r24, 0xFB	; 251
+     a74:	91 e0       	ldi	r25, 0x01	; 1
+     a76:	0e 94 67 04 	call	0x8ce	; 0x8ce <_ZL12m_aci_q_initP11aci_queue_t>
+
+  //Configure the IO lines
+   DDRD |= (1 << HAL_IO_RADIO_RESET); //pinMode(HAL_IO_RADIO_RESET, OUTPUT);
+     a7a:	4a b1       	in	r20, 0x0a	; 10
+     a7c:	81 e0       	ldi	r24, 0x01	; 1
+     a7e:	90 e0       	ldi	r25, 0x00	; 0
+     a80:	9c 01       	movw	r18, r24
+     a82:	00 90 0d 01 	lds	r0, 0x010D
+     a86:	02 c0       	rjmp	.+4      	; 0xa8c <_Z15hal_aci_tl_initv+0x3c>
+     a88:	22 0f       	add	r18, r18
+     a8a:	33 1f       	adc	r19, r19
+     a8c:	0a 94       	dec	r0
+     a8e:	e2 f7       	brpl	.-8      	; 0xa88 <_Z15hal_aci_tl_initv+0x38>
+     a90:	24 2b       	or	r18, r20
+     a92:	2a b9       	out	0x0a, r18	; 10
+  PORTD |= (1 << HAL_IO_RADIO_RDY);   //pinMode(HAL_IO_RADIO_RDY,   INPUT_PULLUP);
+     a94:	4b b1       	in	r20, 0x0b	; 11
+     a96:	9c 01       	movw	r18, r24
+     a98:	00 90 0b 01 	lds	r0, 0x010B
+     a9c:	02 c0       	rjmp	.+4      	; 0xaa2 <_Z15hal_aci_tl_initv+0x52>
+     a9e:	22 0f       	add	r18, r18
+     aa0:	33 1f       	adc	r19, r19
+     aa2:	0a 94       	dec	r0
+     aa4:	e2 f7       	brpl	.-8      	; 0xa9e <_Z15hal_aci_tl_initv+0x4e>
+     aa6:	24 2b       	or	r18, r20
+     aa8:	2b b9       	out	0x0b, r18	; 11
+   DDRB |= (1 << HAL_IO_RADIO_REQN);  //pinMode(HAL_IO_RADIO_REQN,  OUTPUT);
+     aaa:	44 b1       	in	r20, 0x04	; 4
+     aac:	9c 01       	movw	r18, r24
+     aae:	00 90 0c 01 	lds	r0, 0x010C
+     ab2:	02 c0       	rjmp	.+4      	; 0xab8 <_Z15hal_aci_tl_initv+0x68>
+     ab4:	22 0f       	add	r18, r18
+     ab6:	33 1f       	adc	r19, r19
+     ab8:	0a 94       	dec	r0
+     aba:	e2 f7       	brpl	.-8      	; 0xab4 <_Z15hal_aci_tl_initv+0x64>
+     abc:	24 2b       	or	r18, r20
+     abe:	24 b9       	out	0x04, r18	; 4
+  
+  PORTD |= (1 << HAL_IO_RADIO_RESET);   //digitalWrite(HAL_IO_RADIO_RESET, 1);
+     ac0:	2b b1       	in	r18, 0x0b	; 11
+     ac2:	00 90 0d 01 	lds	r0, 0x010D
+     ac6:	02 c0       	rjmp	.+4      	; 0xacc <_Z15hal_aci_tl_initv+0x7c>
+     ac8:	88 0f       	add	r24, r24
+     aca:	99 1f       	adc	r25, r25
+     acc:	0a 94       	dec	r0
+     ace:	e2 f7       	brpl	.-8      	; 0xac8 <_Z15hal_aci_tl_initv+0x78>
+     ad0:	82 2b       	or	r24, r18
+     ad2:	8b b9       	out	0x0b, r24	; 11
+     ad4:	2f ef       	ldi	r18, 0xFF	; 255
+     ad6:	80 e7       	ldi	r24, 0x70	; 112
+     ad8:	92 e0       	ldi	r25, 0x02	; 2
+     ada:	21 50       	subi	r18, 0x01	; 1
+     adc:	80 40       	sbci	r24, 0x00	; 0
+     ade:	90 40       	sbci	r25, 0x00	; 0
+     ae0:	e1 f7       	brne	.-8      	; 0xada <_Z15hal_aci_tl_initv+0x8a>
+     ae2:	00 c0       	rjmp	.+0      	; 0xae4 <_Z15hal_aci_tl_initv+0x94>
+     ae4:	00 00       	nop
+  _delay_ms(100);
+  PORTD &= ~(1 << HAL_IO_RADIO_RESET);  //digitalWrite(HAL_IO_RADIO_RESET, 0);
+     ae6:	4b b1       	in	r20, 0x0b	; 11
+     ae8:	81 e0       	ldi	r24, 0x01	; 1
+     aea:	90 e0       	ldi	r25, 0x00	; 0
+     aec:	9c 01       	movw	r18, r24
+     aee:	00 90 0d 01 	lds	r0, 0x010D
+     af2:	02 c0       	rjmp	.+4      	; 0xaf8 <_Z15hal_aci_tl_initv+0xa8>
+     af4:	22 0f       	add	r18, r18
+     af6:	33 1f       	adc	r19, r19
+     af8:	0a 94       	dec	r0
+     afa:	e2 f7       	brpl	.-8      	; 0xaf4 <_Z15hal_aci_tl_initv+0xa4>
+     afc:	20 95       	com	r18
+     afe:	24 23       	and	r18, r20
+     b00:	2b b9       	out	0x0b, r18	; 11
+  PORTD |=  (1 << HAL_IO_RADIO_RESET);  //digitalWrite(HAL_IO_RADIO_RESET, 1);
+     b02:	4b b1       	in	r20, 0x0b	; 11
+     b04:	9c 01       	movw	r18, r24
+     b06:	00 90 0d 01 	lds	r0, 0x010D
+     b0a:	02 c0       	rjmp	.+4      	; 0xb10 <_Z15hal_aci_tl_initv+0xc0>
+     b0c:	22 0f       	add	r18, r18
+     b0e:	33 1f       	adc	r19, r19
+     b10:	0a 94       	dec	r0
+     b12:	e2 f7       	brpl	.-8      	; 0xb0c <_Z15hal_aci_tl_initv+0xbc>
+     b14:	24 2b       	or	r18, r20
+     b16:	2b b9       	out	0x0b, r18	; 11
+  
+  PORTB &=  ~(1 << PORTB5);           //digitalWrite(SCK,  0);
+     b18:	2d 98       	cbi	0x05, 5	; 5
+  PORTB &=  ~(1 << PORTB3);           //digitalWrite(MOSI, 0);
+     b1a:	2b 98       	cbi	0x05, 3	; 5
+  PORTB |= (1 << HAL_IO_RADIO_REQN);  //digitalWrite(HAL_IO_RADIO_REQN,   1);
+     b1c:	25 b1       	in	r18, 0x05	; 5
+     b1e:	00 90 0c 01 	lds	r0, 0x010C
+     b22:	02 c0       	rjmp	.+4      	; 0xb28 <_Z15hal_aci_tl_initv+0xd8>
+     b24:	88 0f       	add	r24, r24
+     b26:	99 1f       	adc	r25, r25
+     b28:	0a 94       	dec	r0
+     b2a:	e2 f7       	brpl	.-8      	; 0xb24 <_Z15hal_aci_tl_initv+0xd4>
+     b2c:	82 2b       	or	r24, r18
+     b2e:	85 b9       	out	0x05, r24	; 5
+  PORTB &=  ~(1 << PORTB5);           //digitalWrite(SCK,  0);  
+     b30:	2d 98       	cbi	0x05, 5	; 5
+  
+  HAL_IO_RADIO_IRQ = 0xFF;
+  for (uint8_t i=0; i<sizeof(dreqinttable); i+=2) {
+    if (HAL_IO_RADIO_RDY == dreqinttable[i]) {
+     b32:	80 91 0b 01 	lds	r24, 0x010B
+     b36:	99 27       	eor	r25, r25
+     b38:	87 fd       	sbrc	r24, 7
+     b3a:	90 95       	com	r25
+     b3c:	21 e0       	ldi	r18, 0x01	; 1
+     b3e:	82 30       	cpi	r24, 0x02	; 2
+     b40:	91 05       	cpc	r25, r1
+     b42:	09 f4       	brne	.+2      	; 0xb46 <_Z15hal_aci_tl_initv+0xf6>
+     b44:	20 e0       	ldi	r18, 0x00	; 0
+     b46:	21 95       	neg	r18
+     b48:	03 97       	sbiw	r24, 0x03	; 3
+     b4a:	09 f4       	brne	.+2      	; 0xb4e <_Z15hal_aci_tl_initv+0xfe>
+      HAL_IO_RADIO_IRQ = dreqinttable[i+1];
+     b4c:	21 e0       	ldi	r18, 0x01	; 1
+     b4e:	20 93 0a 01 	sts	0x010A, r18
+     b52:	8f e5       	ldi	r24, 0x5F	; 95
+     b54:	9a ee       	ldi	r25, 0xEA	; 234
+     b56:	01 97       	sbiw	r24, 0x01	; 1
+     b58:	f1 f7       	brne	.-4      	; 0xb56 <_Z15hal_aci_tl_initv+0x106>
+     b5a:	00 c0       	rjmp	.+0      	; 0xb5c <_Z15hal_aci_tl_initv+0x10c>
+     b5c:	00 00       	nop
+    }
+  }
+
+  _delay_ms(30); //Wait for the nRF8001 to get hold of its lines - the lines float for a few ms after the reset
+  if (HAL_IO_RADIO_IRQ != 0xFF) {
+	  sei();
+     b5e:	78 94       	sei
+	  EIMSK |= (1 << INT0);  //SREG is due to be set!
+     b60:	e8 9a       	sbi	0x1d, 0	; 29
+     b62:	08 95       	ret
+
+00000b64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>:
+  // We use the LOW level of the RDYN line as the atmega328 can wakeup from sleep only on LOW
+  }
+}
+
+bool hal_aci_tl_send(hal_aci_data_t *p_aci_cmd)
+{
+     b64:	cf 93       	push	r28
+     b66:	df 93       	push	r29
+     b68:	ec 01       	movw	r28, r24
+  const uint8_t length = p_aci_cmd->buffer[0];
+  bool ret_val = false;
+
+  if (length > HAL_ACI_MAX_LENGTH)
+     b6a:	89 81       	ldd	r24, Y+1	; 0x01
+     b6c:	80 32       	cpi	r24, 0x20	; 32
+     b6e:	e8 f4       	brcc	.+58     	; 0xbaa <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x46>
+  {
+    return false;
+  }
+  else
+  {
+    if (m_aci_q_enqueue(&aci_tx_q, p_aci_cmd))
+     b70:	be 01       	movw	r22, r28
+     b72:	85 e0       	ldi	r24, 0x05	; 5
+     b74:	93 e0       	ldi	r25, 0x03	; 3
+     b76:	0e 94 8d 04 	call	0x91a	; 0x91a <_ZL15m_aci_q_enqueueP11aci_queue_tP14hal_aci_data_t>
+    {
+      ret_val = true;
+    }
+  }
+
+  if (true == aci_debug_print)
+     b7a:	90 91 0f 04 	lds	r25, 0x040F
+     b7e:	99 23       	and	r25, r25
+     b80:	29 f0       	breq	.+10     	; 0xb8c <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x28>
+
+
+
+void m_print_aci_data(hal_aci_data_t *p_data)
+{
+  const uint8_t length = p_data->buffer[0];
+     b82:	29 81       	ldd	r18, Y+1	; 0x01
+  uint8_t i;
+  //Serial.print(length, DEC);
+  //Serial.print(" :");
+  for (i=0; i<=length; i++)
+     b84:	90 e0       	ldi	r25, 0x00	; 0
+     b86:	9f 5f       	subi	r25, 0xFF	; 255
+     b88:	29 17       	cp	r18, r25
+     b8a:	e8 f7       	brcc	.-6      	; 0xb86 <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x22>
+  {
+    //Serial.print("C");
+    m_print_aci_data(p_aci_cmd);
+  }
+  
+  HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 0);
+     b8c:	95 b1       	in	r25, 0x05	; 5
+     b8e:	41 e0       	ldi	r20, 0x01	; 1
+     b90:	50 e0       	ldi	r21, 0x00	; 0
+     b92:	9a 01       	movw	r18, r20
+     b94:	00 90 0c 01 	lds	r0, 0x010C
+     b98:	02 c0       	rjmp	.+4      	; 0xb9e <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x3a>
+     b9a:	22 0f       	add	r18, r18
+     b9c:	33 1f       	adc	r19, r19
+     b9e:	0a 94       	dec	r0
+     ba0:	e2 f7       	brpl	.-8      	; 0xb9a <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x36>
+     ba2:	20 95       	com	r18
+     ba4:	29 23       	and	r18, r25
+     ba6:	25 b9       	out	0x05, r18	; 5
+  return ret_val;
+     ba8:	01 c0       	rjmp	.+2      	; 0xbac <_Z15hal_aci_tl_sendP14hal_aci_data_t+0x48>
+  const uint8_t length = p_aci_cmd->buffer[0];
+  bool ret_val = false;
+
+  if (length > HAL_ACI_MAX_LENGTH)
+  {
+    return false;
+     baa:	80 e0       	ldi	r24, 0x00	; 0
+    m_print_aci_data(p_aci_cmd);
+  }
+  
+  HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 0);
+  return ret_val;
+}
+     bac:	df 91       	pop	r29
+     bae:	cf 91       	pop	r28
+     bb0:	08 95       	ret
+
+00000bb2 <_Z19hal_aci_tl_poll_getv>:
+
+
+
+hal_aci_data_t * hal_aci_tl_poll_get(void)
+{
+     bb2:	cf 93       	push	r28
+     bb4:	df 93       	push	r29
+     bb6:	cd b7       	in	r28, 0x3d	; 61
+     bb8:	de b7       	in	r29, 0x3e	; 62
+     bba:	a1 97       	sbiw	r28, 0x21	; 33
+     bbc:	0f b6       	in	r0, 0x3f	; 63
+     bbe:	f8 94       	cli
+     bc0:	de bf       	out	0x3e, r29	; 62
+     bc2:	0f be       	out	0x3f, r0	; 63
+     bc4:	cd bf       	out	0x3d, r28	; 61
+  uint8_t byte_sent_cnt;
+  uint8_t max_bytes;
+  hal_aci_data_t data_to_send;
+
+
+  SPI.begin();  
+     bc6:	0e 94 72 03 	call	0x6e4	; 0x6e4 <_ZN8SPIClass5beginEv>
+    
+  HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 0);
+     bca:	25 b1       	in	r18, 0x05	; 5
+     bcc:	81 e0       	ldi	r24, 0x01	; 1
+     bce:	90 e0       	ldi	r25, 0x00	; 0
+     bd0:	00 90 0c 01 	lds	r0, 0x010C
+     bd4:	02 c0       	rjmp	.+4      	; 0xbda <_Z19hal_aci_tl_poll_getv+0x28>
+     bd6:	88 0f       	add	r24, r24
+     bd8:	99 1f       	adc	r25, r25
+     bda:	0a 94       	dec	r0
+     bdc:	e2 f7       	brpl	.-8      	; 0xbd6 <_Z19hal_aci_tl_poll_getv+0x24>
+     bde:	80 95       	com	r24
+     be0:	82 23       	and	r24, r18
+     be2:	85 b9       	out	0x05, r24	; 5
+}
+
+//@comment after a port have test for the queue states, esp. the full and the empty states
+static bool m_aci_q_dequeue(aci_queue_t *aci_q, hal_aci_data_t *p_data)
+{
+  if (aci_q->head == aci_q->tail)
+     be4:	e0 91 0d 04 	lds	r30, 0x040D
+     be8:	80 91 0e 04 	lds	r24, 0x040E
+     bec:	e8 17       	cp	r30, r24
+     bee:	09 f4       	brne	.+2      	; 0xbf2 <_Z19hal_aci_tl_poll_getv+0x40>
+     bf0:	71 c0       	rjmp	.+226    	; 0xcd4 <_Z19hal_aci_tl_poll_getv+0x122>
+  {
+    /* empty queue */
+    return false;
+  }
+  
+  memcpy((uint8_t *)p_data, (uint8_t *)&(aci_q->aci_data[aci_q->head]), sizeof(hal_aci_data_t));
+     bf2:	8e 2f       	mov	r24, r30
+     bf4:	90 e0       	ldi	r25, 0x00	; 0
+     bf6:	21 e2       	ldi	r18, 0x21	; 33
+     bf8:	e2 9f       	mul	r30, r18
+     bfa:	f0 01       	movw	r30, r0
+     bfc:	11 24       	eor	r1, r1
+     bfe:	eb 5f       	subi	r30, 0xFB	; 251
+     c00:	fc 4f       	sbci	r31, 0xFC	; 252
+     c02:	21 e2       	ldi	r18, 0x21	; 33
+     c04:	de 01       	movw	r26, r28
+     c06:	11 96       	adiw	r26, 0x01	; 1
+     c08:	01 90       	ld	r0, Z+
+     c0a:	0d 92       	st	X+, r0
+     c0c:	2a 95       	dec	r18
+     c0e:	e1 f7       	brne	.-8      	; 0xc08 <_Z19hal_aci_tl_poll_getv+0x56>
+  aci_q->head = (aci_q->head + 1) % ACI_QUEUE_SIZE;
+     c10:	01 96       	adiw	r24, 0x01	; 1
+     c12:	87 70       	andi	r24, 0x07	; 7
+     c14:	90 78       	andi	r25, 0x80	; 128
+     c16:	80 93 0d 04 	sts	0x040D, r24
+  
+  //Change this if your mcu has DMA for the master SPI
+  
+  // Send length, receive header
+  byte_sent_cnt = 0;
+  received_data.status_byte = spi_readwrite(data_to_send.buffer[byte_sent_cnt++]);
+     c1a:	8a 81       	ldd	r24, Y+2	; 0x02
+};
+
+extern SPIClass SPI;
+
+char SPIClass::transfer(char _data) {
+  SPDR = _data;
+     c1c:	8e bd       	out	0x2e, r24	; 46
+  while (!(SPSR & _BV(SPIF)))
+     c1e:	0d b4       	in	r0, 0x2d	; 45
+     c20:	07 fe       	sbrs	r0, 7
+     c22:	fd cf       	rjmp	.-6      	; 0xc1e <_Z19hal_aci_tl_poll_getv+0x6c>
+    ;
+  return SPDR;
+     c24:	8e b5       	in	r24, 0x2e	; 46
+     c26:	80 93 10 04 	sts	0x0410, r24
+  // Send first byte, receive length from slave
+  received_data.buffer[0] = spi_readwrite(data_to_send.buffer[byte_sent_cnt++]);
+     c2a:	8b 81       	ldd	r24, Y+3	; 0x03
+};
+
+extern SPIClass SPI;
+
+char SPIClass::transfer(char _data) {
+  SPDR = _data;
+     c2c:	8e bd       	out	0x2e, r24	; 46
+  while (!(SPSR & _BV(SPIF)))
+     c2e:	0d b4       	in	r0, 0x2d	; 45
+     c30:	07 fe       	sbrs	r0, 7
+     c32:	fd cf       	rjmp	.-6      	; 0xc2e <_Z19hal_aci_tl_poll_getv+0x7c>
+    ;
+  return SPDR;
+     c34:	2e b5       	in	r18, 0x2e	; 46
+     c36:	20 93 11 04 	sts	0x0411, r18
+  if (0 == data_to_send.buffer[0])
+     c3a:	8a 81       	ldd	r24, Y+2	; 0x02
+     c3c:	88 23       	and	r24, r24
+     c3e:	41 f0       	breq	.+16     	; 0xc50 <_Z19hal_aci_tl_poll_getv+0x9e>
+  }
+  else
+  {
+    // Set the maximum to the biggest size. One command byte is already sent
+    max_bytes = (received_data.buffer[0] > (data_to_send.buffer[0] - 1)) 
+      ? received_data.buffer[0] : (data_to_send.buffer[0] - 1);
+     c40:	90 e0       	ldi	r25, 0x00	; 0
+     c42:	30 e0       	ldi	r19, 0x00	; 0
+     c44:	01 97       	sbiw	r24, 0x01	; 1
+     c46:	82 17       	cp	r24, r18
+     c48:	93 07       	cpc	r25, r19
+     c4a:	0c f4       	brge	.+2      	; 0xc4e <_Z19hal_aci_tl_poll_getv+0x9c>
+     c4c:	c9 01       	movw	r24, r18
+     c4e:	28 2f       	mov	r18, r24
+     c50:	82 2f       	mov	r24, r18
+     c52:	20 32       	cpi	r18, 0x20	; 32
+     c54:	08 f0       	brcs	.+2      	; 0xc58 <_Z19hal_aci_tl_poll_getv+0xa6>
+     c56:	8f e1       	ldi	r24, 0x1F	; 31
+  {
+    max_bytes = HAL_ACI_MAX_LENGTH;
+  }
+
+  // Transmit/receive the rest of the packet 
+  for (byte_cnt = 0; byte_cnt < max_bytes; byte_cnt++)
+     c58:	88 23       	and	r24, r24
+     c5a:	b1 f0       	breq	.+44     	; 0xc88 <_Z19hal_aci_tl_poll_getv+0xd6>
+     c5c:	fe 01       	movw	r30, r28
+     c5e:	34 96       	adiw	r30, 0x04	; 4
+     c60:	a2 e1       	ldi	r26, 0x12	; 18
+     c62:	b4 e0       	ldi	r27, 0x04	; 4
+     c64:	81 50       	subi	r24, 0x01	; 1
+     c66:	25 e0       	ldi	r18, 0x05	; 5
+     c68:	30 e0       	ldi	r19, 0x00	; 0
+     c6a:	2c 0f       	add	r18, r28
+     c6c:	3d 1f       	adc	r19, r29
+     c6e:	28 0f       	add	r18, r24
+     c70:	31 1d       	adc	r19, r1
+     c72:	c9 01       	movw	r24, r18
+  {
+    received_data.buffer[byte_cnt+1] =  spi_readwrite(data_to_send.buffer[byte_sent_cnt++]);
+     c74:	21 91       	ld	r18, Z+
+};
+
+extern SPIClass SPI;
+
+char SPIClass::transfer(char _data) {
+  SPDR = _data;
+     c76:	2e bd       	out	0x2e, r18	; 46
+  while (!(SPSR & _BV(SPIF)))
+     c78:	0d b4       	in	r0, 0x2d	; 45
+     c7a:	07 fe       	sbrs	r0, 7
+     c7c:	fd cf       	rjmp	.-6      	; 0xc78 <_Z19hal_aci_tl_poll_getv+0xc6>
+    ;
+  return SPDR;
+     c7e:	2e b5       	in	r18, 0x2e	; 46
+     c80:	2d 93       	st	X+, r18
+  {
+    max_bytes = HAL_ACI_MAX_LENGTH;
+  }
+
+  // Transmit/receive the rest of the packet 
+  for (byte_cnt = 0; byte_cnt < max_bytes; byte_cnt++)
+     c82:	e8 17       	cp	r30, r24
+     c84:	f9 07       	cpc	r31, r25
+     c86:	b1 f7       	brne	.-20     	; 0xc74 <_Z19hal_aci_tl_poll_getv+0xc2>
+  {
+    received_data.buffer[byte_cnt+1] =  spi_readwrite(data_to_send.buffer[byte_sent_cnt++]);
+  }
+
+  HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 1);
+     c88:	25 b1       	in	r18, 0x05	; 5
+     c8a:	81 e0       	ldi	r24, 0x01	; 1
+     c8c:	90 e0       	ldi	r25, 0x00	; 0
+     c8e:	00 90 0c 01 	lds	r0, 0x010C
+     c92:	02 c0       	rjmp	.+4      	; 0xc98 <_Z19hal_aci_tl_poll_getv+0xe6>
+     c94:	88 0f       	add	r24, r24
+     c96:	99 1f       	adc	r25, r25
+     c98:	0a 94       	dec	r0
+     c9a:	e2 f7       	brpl	.-8      	; 0xc94 <_Z19hal_aci_tl_poll_getv+0xe2>
+     c9c:	82 2b       	or	r24, r18
+     c9e:	85 b9       	out	0x05, r24	; 5
+  SPI.end();
+     ca0:	0e 94 7d 03 	call	0x6fa	; 0x6fa <_ZN8SPIClass3endEv>
+  //RDYN should follow the REQN line in approx 100ns
+  
+  sleep_enable();
+     ca4:	83 b7       	in	r24, 0x33	; 51
+     ca6:	81 60       	ori	r24, 0x01	; 1
+     ca8:	83 bf       	out	0x33, r24	; 51
+  EIMSK |= (1 << INT0);  //SREG is due to be set! //attachInterrupt(HAL_IO_RADIO_IRQ, m_rdy_line_handle, LOW);  
+     caa:	e8 9a       	sbi	0x1d, 0	; 29
+
+
+  
+  if (false == m_aci_q_is_empty(&aci_tx_q))
+     cac:	90 91 0d 04 	lds	r25, 0x040D
+     cb0:	80 91 0e 04 	lds	r24, 0x040E
+     cb4:	98 17       	cp	r25, r24
+     cb6:	81 f0       	breq	.+32     	; 0xcd8 <_Z19hal_aci_tl_poll_getv+0x126>
+  {
+    //Lower the REQN line to start a new ACI transaction         
+    HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 0); 
+     cb8:	25 b1       	in	r18, 0x05	; 5
+     cba:	81 e0       	ldi	r24, 0x01	; 1
+     cbc:	90 e0       	ldi	r25, 0x00	; 0
+     cbe:	00 90 0c 01 	lds	r0, 0x010C
+     cc2:	02 c0       	rjmp	.+4      	; 0xcc8 <_Z19hal_aci_tl_poll_getv+0x116>
+     cc4:	88 0f       	add	r24, r24
+     cc6:	99 1f       	adc	r25, r25
+     cc8:	0a 94       	dec	r0
+     cca:	e2 f7       	brpl	.-8      	; 0xcc4 <_Z19hal_aci_tl_poll_getv+0x112>
+     ccc:	80 95       	com	r24
+     cce:	82 23       	and	r24, r18
+     cd0:	85 b9       	out	0x05, r24	; 5
+     cd2:	02 c0       	rjmp	.+4      	; 0xcd8 <_Z19hal_aci_tl_poll_getv+0x126>
+  // Receive from queue
+  if (m_aci_q_dequeue(&aci_tx_q, &data_to_send) == false)
+  {
+    /* queue was empty, nothing to send */
+    data_to_send.status_byte = 0;
+    data_to_send.buffer[0] = 0;
+     cd4:	1a 82       	std	Y+2, r1	; 0x02
+     cd6:	a1 cf       	rjmp	.-190    	; 0xc1a <_Z19hal_aci_tl_poll_getv+0x68>
+    HAL_IO_SET_STATE(HAL_IO_RADIO_REQN, 0); 
+  }
+  
+  /* valid Rx available or transmit finished*/
+  return (&received_data);
+}
+     cd8:	80 e1       	ldi	r24, 0x10	; 16
+     cda:	94 e0       	ldi	r25, 0x04	; 4
+     cdc:	a1 96       	adiw	r28, 0x21	; 33
+     cde:	0f b6       	in	r0, 0x3f	; 63
+     ce0:	f8 94       	cli
+     ce2:	de bf       	out	0x3e, r29	; 62
+     ce4:	0f be       	out	0x3f, r0	; 63
+     ce6:	cd bf       	out	0x3d, r28	; 61
+     ce8:	df 91       	pop	r29
+     cea:	cf 91       	pop	r28
+     cec:	08 95       	ret
+
+00000cee <__vector_1>:
+  m_aci_q_init(&aci_tx_q);
+  m_aci_q_init(&aci_rx_q);
+  sei(); //interrupts();
+}
+
+ISR(INT0_vect){
+     cee:	1f 92       	push	r1
+     cf0:	0f 92       	push	r0
+     cf2:	0f b6       	in	r0, 0x3f	; 63
+     cf4:	0f 92       	push	r0
+     cf6:	11 24       	eor	r1, r1
+     cf8:	2f 93       	push	r18
+     cfa:	3f 93       	push	r19
+     cfc:	4f 93       	push	r20
+     cfe:	5f 93       	push	r21
+     d00:	6f 93       	push	r22
+     d02:	7f 93       	push	r23
+     d04:	8f 93       	push	r24
+     d06:	9f 93       	push	r25
+     d08:	af 93       	push	r26
+     d0a:	bf 93       	push	r27
+     d0c:	ef 93       	push	r30
+     d0e:	ff 93       	push	r31
+	
+  hal_aci_data_t *p_aci_data;
+  
+  sleep_disable();
+     d10:	83 b7       	in	r24, 0x33	; 51
+     d12:	8e 7f       	andi	r24, 0xFE	; 254
+     d14:	83 bf       	out	0x33, r24	; 51
+  cli();//detachInterrupt(1);
+     d16:	f8 94       	cli
+  
+  // Receive or transmit data
+  p_aci_data = hal_aci_tl_poll_get();
+     d18:	0e 94 d9 05 	call	0xbb2	; 0xbb2 <_Z19hal_aci_tl_poll_getv>
+  
+  // Check if we received data
+  if (p_aci_data->buffer[0] > 0)
+     d1c:	fc 01       	movw	r30, r24
+     d1e:	21 81       	ldd	r18, Z+1	; 0x01
+     d20:	22 23       	and	r18, r18
+     d22:	89 f0       	breq	.+34     	; 0xd46 <__vector_1+0x58>
+  {
+    if (!m_aci_q_enqueue(&aci_rx_q, p_aci_data))
+     d24:	bc 01       	movw	r22, r24
+     d26:	8b ef       	ldi	r24, 0xFB	; 251
+     d28:	91 e0       	ldi	r25, 0x01	; 1
+     d2a:	0e 94 8d 04 	call	0x91a	; 0x91a <_ZL15m_aci_q_enqueueP11aci_queue_tP14hal_aci_data_t>
+     d2e:	81 11       	cpse	r24, r1
+     d30:	01 c0       	rjmp	.+2      	; 0xd34 <__vector_1+0x46>
+     d32:	ff cf       	rjmp	.-2      	; 0xd32 <__vector_1+0x44>
+         Should never happen.
+         Spin in a while loop.
+         */
+       while(1);
+    }
+    if (m_aci_q_is_full(&aci_rx_q))
+     d34:	8b ef       	ldi	r24, 0xFB	; 251
+     d36:	91 e0       	ldi	r25, 0x01	; 1
+     d38:	0e 94 7c 04 	call	0x8f8	; 0x8f8 <_ZL15m_aci_q_is_fullP11aci_queue_t>
+     d3c:	88 23       	and	r24, r24
+     d3e:	19 f0       	breq	.+6      	; 0xd46 <__vector_1+0x58>
+    {
+      /* Disable RDY line interrupt.
+         Will latch any pending RDY lines, so when enabled it again this
+         routine should be taken again */
+      toggle_eimsk(false);
+     d40:	80 e0       	ldi	r24, 0x00	; 0
+     d42:	0e 94 c3 04 	call	0x986	; 0x986 <_Z12toggle_eimskb>
+    }    
+  }
+  
+  sei();
+     d46:	78 94       	sei
+     d48:	ff 91       	pop	r31
+     d4a:	ef 91       	pop	r30
+     d4c:	bf 91       	pop	r27
+     d4e:	af 91       	pop	r26
+     d50:	9f 91       	pop	r25
+     d52:	8f 91       	pop	r24
+     d54:	7f 91       	pop	r23
+     d56:	6f 91       	pop	r22
+     d58:	5f 91       	pop	r21
+     d5a:	4f 91       	pop	r20
+     d5c:	3f 91       	pop	r19
+     d5e:	2f 91       	pop	r18
+     d60:	0f 90       	pop	r0
+     d62:	0f be       	out	0x3f, r0	; 63
+     d64:	0f 90       	pop	r0
+     d66:	1f 90       	pop	r1
+     d68:	18 95       	reti
+
+00000d6a <_Z25lib_aci_is_pipe_availableP11aci_state_th>:
+
+bool lib_aci_is_pipe_available(aci_state_t *aci_stat, uint8_t pipe)
+{
+  uint8_t byte_idx;
+
+  byte_idx = pipe / 8;
+     d6a:	26 2f       	mov	r18, r22
+     d6c:	26 95       	lsr	r18
+     d6e:	26 95       	lsr	r18
+     d70:	26 95       	lsr	r18
+  if (aci_stat->pipes_open_bitmap[byte_idx] & (0x01 << (pipe % 8)))
+     d72:	fc 01       	movw	r30, r24
+     d74:	e2 0f       	add	r30, r18
+     d76:	f1 1d       	adc	r31, r1
+     d78:	20 89       	ldd	r18, Z+16	; 0x10
+     d7a:	30 e0       	ldi	r19, 0x00	; 0
+     d7c:	67 70       	andi	r22, 0x07	; 7
+     d7e:	c9 01       	movw	r24, r18
+     d80:	02 c0       	rjmp	.+4      	; 0xd86 <_Z25lib_aci_is_pipe_availableP11aci_state_th+0x1c>
+     d82:	95 95       	asr	r25
+     d84:	87 95       	ror	r24
+     d86:	6a 95       	dec	r22
+     d88:	e2 f7       	brpl	.-8      	; 0xd82 <_Z25lib_aci_is_pipe_availableP11aci_state_th+0x18>
+  {
+    return(true);
+  }
+  return(false);
+}
+     d8a:	81 70       	andi	r24, 0x01	; 1
+     d8c:	08 95       	ret
+
+00000d8e <_Z12lib_aci_initP11aci_state_t>:
+
+
+
+
+void lib_aci_init(aci_state_t *aci_stat)
+{
+     d8e:	cf 93       	push	r28
+     d90:	df 93       	push	r29
+     d92:	dc 01       	movw	r26, r24
+     d94:	58 96       	adiw	r26, 0x18	; 24
+     d96:	e2 e3       	ldi	r30, 0x32	; 50
+     d98:	f4 e0       	ldi	r31, 0x04	; 4
+     d9a:	2a e3       	ldi	r18, 0x3A	; 58
+     d9c:	34 e0       	ldi	r19, 0x04	; 4
+     d9e:	ed 01       	movw	r28, r26
+     da0:	28 97       	sbiw	r28, 0x08	; 8
+  uint8_t i;
+
+  for (i = 0; i < PIPES_ARRAY_SIZE; i++)
+  {
+    aci_stat->pipes_open_bitmap[i]          = 0;
+     da2:	18 82       	st	Y, r1
+    aci_stat->pipes_closed_bitmap[i]        = 0;
+     da4:	1d 92       	st	X+, r1
+    aci_cmd_params_open_adv_pipe.pipes[i]   = 0;
+     da6:	11 92       	st	Z+, r1
+
+void lib_aci_init(aci_state_t *aci_stat)
+{
+  uint8_t i;
+
+  for (i = 0; i < PIPES_ARRAY_SIZE; i++)
+     da8:	e2 17       	cp	r30, r18
+     daa:	f3 07       	cpc	r31, r19
+     dac:	c1 f7       	brne	.-16     	; 0xd9e <_Z12lib_aci_initP11aci_state_t+0x10>
+  }
+  
+
+
+
+  is_request_operation_pending     = false;
+     dae:	10 92 3f 04 	sts	0x043F, r1
+  is_indicate_operation_pending    = false; 
+     db2:	10 92 3e 04 	sts	0x043E, r1
+  is_open_remote_pipe_pending      = false;
+     db6:	10 92 3d 04 	sts	0x043D, r1
+  is_close_remote_pipe_pending     = false;
+     dba:	10 92 3c 04 	sts	0x043C, r1
+  cur_transaction_cmd              = ACI_CMD_INVALID;
+     dbe:	2f ef       	ldi	r18, 0xFF	; 255
+     dc0:	20 93 47 04 	sts	0x0447, r18
+  memorized_rcvd_cmd_opcode        = ACI_CMD_INVALID;
+     dc4:	20 93 46 04 	sts	0x0446, r18
+  memorized_transaction_cmd_opcode = ACI_CMD_INVALID;
+     dc8:	20 93 45 04 	sts	0x0445, r18
+  cx_rf_interval                   = 0;
+     dcc:	10 92 43 04 	sts	0x0443, r1
+     dd0:	10 92 42 04 	sts	0x0442, r1
+  current_slave_latency            = 0;
+     dd4:	10 92 41 04 	sts	0x0441, r1
+     dd8:	10 92 40 04 	sts	0x0440, r1
+  request_operation_pipe           = 0;
+     ddc:	10 92 3b 04 	sts	0x043B, r1
+  indicate_operation_pipe          = 0;
+     de0:	10 92 3a 04 	sts	0x043A, r1
+  cur_error_code                   = 0;
+     de4:	10 92 31 04 	sts	0x0431, r1
+  p_rcvd_evt                       = NULL;
+     de8:	10 92 49 04 	sts	0x0449, r1
+     dec:	10 92 48 04 	sts	0x0448, r1
+  
+  p_services_pipe_type_map = aci_stat->aci_setup_info.services_pipe_type_mapping;
+     df0:	fc 01       	movw	r30, r24
+     df2:	20 81       	ld	r18, Z
+     df4:	31 81       	ldd	r19, Z+1	; 0x01
+     df6:	30 93 70 04 	sts	0x0470, r19
+     dfa:	20 93 6f 04 	sts	0x046F, r18
+  pipe_count               = aci_stat->aci_setup_info.number_of_pipes;
+     dfe:	22 81       	ldd	r18, Z+2	; 0x02
+     e00:	20 93 6e 04 	sts	0x046E, r18
+  p_setup_msgs             = aci_stat->aci_setup_info.setup_msgs;
+     e04:	23 81       	ldd	r18, Z+3	; 0x03
+     e06:	34 81       	ldd	r19, Z+4	; 0x04
+     e08:	30 93 6d 04 	sts	0x046D, r19
+     e0c:	20 93 6c 04 	sts	0x046C, r18
+  setup_msgs_count         = aci_stat->aci_setup_info.num_setup_msgs;
+     e10:	85 81       	ldd	r24, Z+5	; 0x05
+     e12:	80 93 6b 04 	sts	0x046B, r24
+  
+  hal_aci_tl_init();
+     e16:	0e 94 28 05 	call	0xa50	; 0xa50 <_Z15hal_aci_tl_initv>
+}
+     e1a:	df 91       	pop	r29
+     e1c:	cf 91       	pop	r28
+     e1e:	08 95       	ret
+
+00000e20 <_Z22lib_aci_device_versionv>:
+}
+
+
+bool lib_aci_device_version()
+{
+  acil_encode_cmd_get_device_version(&(msg_to_send.buffer[0]));
+     e20:	8b e4       	ldi	r24, 0x4B	; 75
+     e22:	94 e0       	ldi	r25, 0x04	; 4
+     e24:	0e 94 9f 03 	call	0x73e	; 0x73e <_Z34acil_encode_cmd_get_device_versionPh>
+  return hal_aci_tl_send(&msg_to_send);
+     e28:	8a e4       	ldi	r24, 0x4A	; 74
+     e2a:	94 e0       	ldi	r25, 0x04	; 4
+     e2c:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+}
+     e30:	08 95       	ret
+
+00000e32 <_Z22lib_aci_set_local_dataP11aci_state_thPhh>:
+
+
+bool lib_aci_set_local_data(aci_state_t *aci_stat, uint8_t pipe, uint8_t *p_value, uint8_t size)
+{
+     e32:	1f 93       	push	r17
+     e34:	cf 93       	push	r28
+     e36:	df 93       	push	r29
+     e38:	cd b7       	in	r28, 0x3d	; 61
+     e3a:	de b7       	in	r29, 0x3e	; 62
+     e3c:	65 97       	sbiw	r28, 0x15	; 21
+     e3e:	0f b6       	in	r0, 0x3f	; 63
+     e40:	f8 94       	cli
+     e42:	de bf       	out	0x3e, r29	; 62
+     e44:	0f be       	out	0x3f, r0	; 63
+     e46:	cd bf       	out	0x3d, r28	; 61
+     e48:	da 01       	movw	r26, r20
+     e4a:	12 2f       	mov	r17, r18
+  aci_cmd_params_set_local_data_t aci_cmd_params_set_local_data;
+  
+  if ((p_services_pipe_type_map[pipe-1].location != ACI_STORE_LOCAL)
+     e4c:	86 2f       	mov	r24, r22
+     e4e:	90 e0       	ldi	r25, 0x00	; 0
+     e50:	fc 01       	movw	r30, r24
+     e52:	ee 0f       	add	r30, r30
+     e54:	ff 1f       	adc	r31, r31
+     e56:	8e 0f       	add	r24, r30
+     e58:	9f 1f       	adc	r25, r31
+     e5a:	e0 91 6f 04 	lds	r30, 0x046F
+     e5e:	f0 91 70 04 	lds	r31, 0x0470
+     e62:	e8 0f       	add	r30, r24
+     e64:	f9 1f       	adc	r31, r25
+     e66:	33 97       	sbiw	r30, 0x03	; 3
+     e68:	80 81       	ld	r24, Z
+     e6a:	81 30       	cpi	r24, 0x01	; 1
+     e6c:	b9 f4       	brne	.+46     	; 0xe9c <_Z22lib_aci_set_local_dataP11aci_state_thPhh+0x6a>
+      ||
+     e6e:	25 31       	cpi	r18, 0x15	; 21
+     e70:	b8 f4       	brcc	.+46     	; 0xea0 <_Z22lib_aci_set_local_dataP11aci_state_thPhh+0x6e>
+      (size > ACI_PIPE_TX_DATA_MAX_LEN))
+  {
+    return false;
+  }
+
+  aci_cmd_params_set_local_data.tx_data.pipe_number = pipe;
+     e72:	69 83       	std	Y+1, r22	; 0x01
+  memcpy(&(aci_cmd_params_set_local_data.tx_data.aci_data[0]), p_value, size);
+     e74:	42 2f       	mov	r20, r18
+     e76:	50 e0       	ldi	r21, 0x00	; 0
+     e78:	bd 01       	movw	r22, r26
+     e7a:	ce 01       	movw	r24, r28
+     e7c:	02 96       	adiw	r24, 0x02	; 2
+     e7e:	0e 94 17 08 	call	0x102e	; 0x102e <memcpy>
+  acil_encode_cmd_set_local_data(&(msg_to_send.buffer[0]), &aci_cmd_params_set_local_data, size);
+     e82:	41 2f       	mov	r20, r17
+     e84:	be 01       	movw	r22, r28
+     e86:	6f 5f       	subi	r22, 0xFF	; 255
+     e88:	7f 4f       	sbci	r23, 0xFF	; 255
+     e8a:	8b e4       	ldi	r24, 0x4B	; 75
+     e8c:	94 e0       	ldi	r25, 0x04	; 4
+     e8e:	0e 94 a5 03 	call	0x74a	; 0x74a <_Z30acil_encode_cmd_set_local_dataPhP31aci_cmd_params_set_local_data_th>
+  return hal_aci_tl_send(&msg_to_send);
+     e92:	8a e4       	ldi	r24, 0x4A	; 74
+     e94:	94 e0       	ldi	r25, 0x04	; 4
+     e96:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+     e9a:	03 c0       	rjmp	.+6      	; 0xea2 <_Z22lib_aci_set_local_dataP11aci_state_thPhh+0x70>
+  
+  if ((p_services_pipe_type_map[pipe-1].location != ACI_STORE_LOCAL)
+      ||
+      (size > ACI_PIPE_TX_DATA_MAX_LEN))
+  {
+    return false;
+     e9c:	80 e0       	ldi	r24, 0x00	; 0
+     e9e:	01 c0       	rjmp	.+2      	; 0xea2 <_Z22lib_aci_set_local_dataP11aci_state_thPhh+0x70>
+     ea0:	80 e0       	ldi	r24, 0x00	; 0
+
+  aci_cmd_params_set_local_data.tx_data.pipe_number = pipe;
+  memcpy(&(aci_cmd_params_set_local_data.tx_data.aci_data[0]), p_value, size);
+  acil_encode_cmd_set_local_data(&(msg_to_send.buffer[0]), &aci_cmd_params_set_local_data, size);
+  return hal_aci_tl_send(&msg_to_send);
+}
+     ea2:	65 96       	adiw	r28, 0x15	; 21
+     ea4:	0f b6       	in	r0, 0x3f	; 63
+     ea6:	f8 94       	cli
+     ea8:	de bf       	out	0x3e, r29	; 62
+     eaa:	0f be       	out	0x3f, r0	; 63
+     eac:	cd bf       	out	0x3d, r28	; 61
+     eae:	df 91       	pop	r29
+     eb0:	cf 91       	pop	r28
+     eb2:	1f 91       	pop	r17
+     eb4:	08 95       	ret
+
+00000eb6 <_Z15lib_aci_connectjj>:
+	acil_encode_cmd_set_local_data(&(msg_to_send.buffer[0]), &aci_cmd_params_set_local_data, size);
+	return hal_aci_tl_send(&msg_to_send);
+}
+
+bool lib_aci_connect(uint16_t run_timeout, uint16_t adv_interval)
+{
+     eb6:	cf 93       	push	r28
+     eb8:	df 93       	push	r29
+     eba:	00 d0       	rcall	.+0      	; 0xebc <_Z15lib_aci_connectjj+0x6>
+     ebc:	00 d0       	rcall	.+0      	; 0xebe <_Z15lib_aci_connectjj+0x8>
+     ebe:	cd b7       	in	r28, 0x3d	; 61
+     ec0:	de b7       	in	r29, 0x3e	; 62
+  aci_cmd_params_connect_t aci_cmd_params_connect;
+  aci_cmd_params_connect.timeout      = run_timeout;
+     ec2:	9a 83       	std	Y+2, r25	; 0x02
+     ec4:	89 83       	std	Y+1, r24	; 0x01
+  aci_cmd_params_connect.adv_interval = adv_interval;
+     ec6:	7c 83       	std	Y+4, r23	; 0x04
+     ec8:	6b 83       	std	Y+3, r22	; 0x03
+  acil_encode_cmd_connect(&(msg_to_send.buffer[0]), &aci_cmd_params_connect);
+     eca:	be 01       	movw	r22, r28
+     ecc:	6f 5f       	subi	r22, 0xFF	; 255
+     ece:	7f 4f       	sbci	r23, 0xFF	; 255
+     ed0:	8b e4       	ldi	r24, 0x4B	; 75
+     ed2:	94 e0       	ldi	r25, 0x04	; 4
+     ed4:	0e 94 b8 03 	call	0x770	; 0x770 <_Z23acil_encode_cmd_connectPhP24aci_cmd_params_connect_t>
+  return hal_aci_tl_send(&msg_to_send);
+     ed8:	8a e4       	ldi	r24, 0x4A	; 74
+     eda:	94 e0       	ldi	r25, 0x04	; 4
+     edc:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+}
+     ee0:	0f 90       	pop	r0
+     ee2:	0f 90       	pop	r0
+     ee4:	0f 90       	pop	r0
+     ee6:	0f 90       	pop	r0
+     ee8:	df 91       	pop	r29
+     eea:	cf 91       	pop	r28
+     eec:	08 95       	ret
+
+00000eee <_Z17lib_aci_send_datahPhh>:
+  return hal_aci_tl_send(&msg_to_send);
+}
+
+
+bool lib_aci_send_data(uint8_t pipe, uint8_t *p_value, uint8_t size)
+{
+     eee:	1f 93       	push	r17
+     ef0:	cf 93       	push	r28
+     ef2:	df 93       	push	r29
+     ef4:	cd b7       	in	r28, 0x3d	; 61
+     ef6:	de b7       	in	r29, 0x3e	; 62
+     ef8:	65 97       	sbiw	r28, 0x15	; 21
+     efa:	0f b6       	in	r0, 0x3f	; 63
+     efc:	f8 94       	cli
+     efe:	de bf       	out	0x3e, r29	; 62
+     f00:	0f be       	out	0x3f, r0	; 63
+     f02:	cd bf       	out	0x3d, r28	; 61
+     f04:	14 2f       	mov	r17, r20
+  bool ret_val = false;
+  aci_cmd_params_send_data_t aci_cmd_params_send_data;
+
+  
+  if(!((p_services_pipe_type_map[pipe-1].pipe_type == ACI_TX) ||
+     f06:	28 2f       	mov	r18, r24
+     f08:	30 e0       	ldi	r19, 0x00	; 0
+     f0a:	f9 01       	movw	r30, r18
+     f0c:	ee 0f       	add	r30, r30
+     f0e:	ff 1f       	adc	r31, r31
+     f10:	2e 0f       	add	r18, r30
+     f12:	3f 1f       	adc	r19, r31
+     f14:	e0 91 6f 04 	lds	r30, 0x046F
+     f18:	f0 91 70 04 	lds	r31, 0x0470
+     f1c:	e2 0f       	add	r30, r18
+     f1e:	f3 1f       	adc	r31, r19
+     f20:	33 97       	sbiw	r30, 0x03	; 3
+     f22:	21 81       	ldd	r18, Z+1	; 0x01
+     f24:	32 81       	ldd	r19, Z+2	; 0x02
+     f26:	22 30       	cpi	r18, 0x02	; 2
+     f28:	31 05       	cpc	r19, r1
+     f2a:	19 f0       	breq	.+6      	; 0xf32 <_Z17lib_aci_send_datahPhh+0x44>
+      (p_services_pipe_type_map[pipe-1].pipe_type == ACI_TX_ACK)))
+     f2c:	24 30       	cpi	r18, 0x04	; 4
+     f2e:	31 05       	cpc	r19, r1
+     f30:	c1 f4       	brne	.+48     	; 0xf62 <_Z17lib_aci_send_datahPhh+0x74>
+  {
+    return false;
+  }
+
+  if (size > ACI_PIPE_TX_DATA_MAX_LEN)
+     f32:	15 31       	cpi	r17, 0x15	; 21
+     f34:	c0 f4       	brcc	.+48     	; 0xf66 <_Z17lib_aci_send_datahPhh+0x78>
+  {
+    return false;
+  }
+  {
+      aci_cmd_params_send_data.tx_data.pipe_number = pipe;
+     f36:	89 83       	std	Y+1, r24	; 0x01
+      memcpy(&(aci_cmd_params_send_data.tx_data.aci_data[0]), p_value, size);
+     f38:	41 2f       	mov	r20, r17
+     f3a:	50 e0       	ldi	r21, 0x00	; 0
+     f3c:	ce 01       	movw	r24, r28
+     f3e:	02 96       	adiw	r24, 0x02	; 2
+     f40:	0e 94 17 08 	call	0x102e	; 0x102e <memcpy>
+      acil_encode_cmd_send_data(&(msg_to_send.buffer[0]), &aci_cmd_params_send_data, size);
+     f44:	41 2f       	mov	r20, r17
+     f46:	be 01       	movw	r22, r28
+     f48:	6f 5f       	subi	r22, 0xFF	; 255
+     f4a:	7f 4f       	sbci	r23, 0xFF	; 255
+     f4c:	8b e4       	ldi	r24, 0x4B	; 75
+     f4e:	94 e0       	ldi	r25, 0x04	; 4
+     f50:	0e 94 cc 03 	call	0x798	; 0x798 <_Z25acil_encode_cmd_send_dataPhP26aci_cmd_params_send_data_th>
+      is_cmd_response_expected = false;
+     f54:	10 92 44 04 	sts	0x0444, r1
+      ret_val = hal_aci_tl_send(&msg_to_send);          
+     f58:	8a e4       	ldi	r24, 0x4A	; 74
+     f5a:	94 e0       	ldi	r25, 0x04	; 4
+     f5c:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+  }
+  return ret_val;
+     f60:	03 c0       	rjmp	.+6      	; 0xf68 <_Z17lib_aci_send_datahPhh+0x7a>
+
+  
+  if(!((p_services_pipe_type_map[pipe-1].pipe_type == ACI_TX) ||
+      (p_services_pipe_type_map[pipe-1].pipe_type == ACI_TX_ACK)))
+  {
+    return false;
+     f62:	80 e0       	ldi	r24, 0x00	; 0
+     f64:	01 c0       	rjmp	.+2      	; 0xf68 <_Z17lib_aci_send_datahPhh+0x7a>
+  }
+
+  if (size > ACI_PIPE_TX_DATA_MAX_LEN)
+  {
+    return false;
+     f66:	80 e0       	ldi	r24, 0x00	; 0
+      acil_encode_cmd_send_data(&(msg_to_send.buffer[0]), &aci_cmd_params_send_data, size);
+      is_cmd_response_expected = false;
+      ret_val = hal_aci_tl_send(&msg_to_send);          
+  }
+  return ret_val;
+}
+     f68:	65 96       	adiw	r28, 0x15	; 21
+     f6a:	0f b6       	in	r0, 0x3f	; 63
+     f6c:	f8 94       	cli
+     f6e:	de bf       	out	0x3e, r29	; 62
+     f70:	0f be       	out	0x3f, r0	; 63
+     f72:	cd bf       	out	0x3d, r28	; 61
+     f74:	df 91       	pop	r29
+     f76:	cf 91       	pop	r28
+     f78:	1f 91       	pop	r17
+     f7a:	08 95       	ret
+
+00000f7c <_Z30lib_aci_change_timing_GAP_PPCPv>:
+}
+
+
+bool lib_aci_change_timing_GAP_PPCP()
+{
+  acil_encode_cmd_change_timing_req_GAP_PPCP(&(msg_to_send.buffer[0]));
+     f7c:	8b e4       	ldi	r24, 0x4B	; 75
+     f7e:	94 e0       	ldi	r25, 0x04	; 4
+     f80:	0e 94 df 03 	call	0x7be	; 0x7be <_Z42acil_encode_cmd_change_timing_req_GAP_PPCPPh>
+  return hal_aci_tl_send(&msg_to_send);
+     f84:	8a e4       	ldi	r24, 0x4A	; 74
+     f86:	94 e0       	ldi	r25, 0x04	; 4
+     f88:	0e 94 b2 05 	call	0xb64	; 0xb64 <_Z15hal_aci_tl_sendP14hal_aci_data_t>
+}
+     f8c:	08 95       	ret
+
+00000f8e <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t>:
+  return hal_aci_tl_send(&msg_to_send);
+}
+
+
+bool lib_aci_event_get(aci_state_t *aci_stat, hal_aci_evt_t *p_aci_evt_data)
+{
+     f8e:	0f 93       	push	r16
+     f90:	1f 93       	push	r17
+     f92:	cf 93       	push	r28
+     f94:	df 93       	push	r29
+     f96:	8c 01       	movw	r16, r24
+     f98:	eb 01       	movw	r28, r22
+  bool status;
+  status = hal_aci_tl_event_get((hal_aci_data_t *)p_aci_evt_data);
+     f9a:	cb 01       	movw	r24, r22
+     f9c:	0e 94 f0 04 	call	0x9e0	; 0x9e0 <_Z20hal_aci_tl_event_getP14hal_aci_data_t>
+  {
+    aci_evt_t * aci_evt;
+    
+    aci_evt = &p_aci_evt_data->evt;  
+    
+    switch(aci_evt->evt_opcode)
+     fa0:	9a 81       	ldd	r25, Y+2	; 0x02
+     fa2:	98 38       	cpi	r25, 0x88	; 136
+     fa4:	29 f0       	breq	.+10     	; 0xfb0 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x22>
+     fa6:	99 38       	cpi	r25, 0x89	; 137
+     fa8:	09 f1       	breq	.+66     	; 0xfec <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x5e>
+     faa:	96 38       	cpi	r25, 0x86	; 134
+     fac:	61 f5       	brne	.+88     	; 0x1006 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x78>
+     fae:	10 c0       	rjmp	.+32     	; 0xfd0 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x42>
+     fb0:	de 01       	movw	r26, r28
+     fb2:	1b 96       	adiw	r26, 0x0b	; 11
+     fb4:	f8 01       	movw	r30, r16
+     fb6:	78 96       	adiw	r30, 0x18	; 24
+     fb8:	98 e0       	ldi	r25, 0x08	; 8
+     fba:	ed 01       	movw	r28, r26
+     fbc:	28 97       	sbiw	r28, 0x08	; 8
+            {
+                uint8_t i=0;
+                
+                for (i=0; i < PIPES_ARRAY_SIZE; i++)
+                {
+                  aci_stat->pipes_open_bitmap[i]   = aci_evt->params.pipe_status.pipes_open_bitmap[i];
+     fbe:	28 81       	ld	r18, Y
+     fc0:	ef 01       	movw	r28, r30
+     fc2:	28 97       	sbiw	r28, 0x08	; 8
+     fc4:	28 83       	st	Y, r18
+                  aci_stat->pipes_closed_bitmap[i] = aci_evt->params.pipe_status.pipes_closed_bitmap[i];
+     fc6:	2d 91       	ld	r18, X+
+     fc8:	21 93       	st	Z+, r18
+     fca:	91 50       	subi	r25, 0x01	; 1
+    {
+        case ACI_EVT_PIPE_STATUS:
+            {
+                uint8_t i=0;
+                
+                for (i=0; i < PIPES_ARRAY_SIZE; i++)
+     fcc:	b1 f7       	brne	.-20     	; 0xfba <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x2c>
+     fce:	1b c0       	rjmp	.+54     	; 0x1006 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x78>
+     fd0:	f8 01       	movw	r30, r16
+     fd2:	78 96       	adiw	r30, 0x18	; 24
+  {
+    aci_evt_t * aci_evt;
+    
+    aci_evt = &p_aci_evt_data->evt;  
+    
+    switch(aci_evt->evt_opcode)
+     fd4:	98 e0       	ldi	r25, 0x08	; 8
+     fd6:	df 01       	movw	r26, r30
+     fd8:	18 97       	sbiw	r26, 0x08	; 8
+            {
+                uint8_t i=0;
+                
+                for (i=0; i < PIPES_ARRAY_SIZE; i++)
+                {
+                  aci_stat->pipes_open_bitmap[i] = 0;
+     fda:	1c 92       	st	X, r1
+                  aci_stat->pipes_closed_bitmap[i] = 0;
+     fdc:	11 92       	st	Z+, r1
+     fde:	91 50       	subi	r25, 0x01	; 1
+        
+        case ACI_EVT_DISCONNECTED:
+            {
+                uint8_t i=0;
+                
+                for (i=0; i < PIPES_ARRAY_SIZE; i++)
+     fe0:	d1 f7       	brne	.-12     	; 0xfd6 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x48>
+                {
+                  aci_stat->pipes_open_bitmap[i] = 0;
+                  aci_stat->pipes_closed_bitmap[i] = 0;
+                }
+                aci_stat->confirmation_pending = false;
+     fe2:	f8 01       	movw	r30, r16
+     fe4:	10 a2       	std	Z+32, r1	; 0x20
+                aci_stat->data_credit_available = aci_stat->data_credit_total;
+     fe6:	97 81       	ldd	r25, Z+7	; 0x07
+     fe8:	91 87       	std	Z+9, r25	; 0x09
+                
+            }
+            break;
+     fea:	0d c0       	rjmp	.+26     	; 0x1006 <_Z17lib_aci_event_getP11aci_state_tP13hal_aci_evt_t+0x78>
+            
+        case ACI_EVT_TIMING:            
+                aci_stat->connection_interval = aci_evt->params.timing.conn_rf_interval;
+     fec:	2b 81       	ldd	r18, Y+3	; 0x03
+     fee:	3c 81       	ldd	r19, Y+4	; 0x04
+     ff0:	f8 01       	movw	r30, r16
+     ff2:	33 87       	std	Z+11, r19	; 0x0b
+     ff4:	22 87       	std	Z+10, r18	; 0x0a
+                aci_stat->slave_latency       = aci_evt->params.timing.conn_slave_rf_latency;
+     ff6:	2d 81       	ldd	r18, Y+5	; 0x05
+     ff8:	3e 81       	ldd	r19, Y+6	; 0x06
+     ffa:	35 87       	std	Z+13, r19	; 0x0d
+     ffc:	24 87       	std	Z+12, r18	; 0x0c
+                aci_stat->supervision_timeout = aci_evt->params.timing.conn_rf_timeout;
+     ffe:	2f 81       	ldd	r18, Y+7	; 0x07
+    1000:	38 85       	ldd	r19, Y+8	; 0x08
+    1002:	37 87       	std	Z+15, r19	; 0x0f
+    1004:	26 87       	std	Z+14, r18	; 0x0e
+    }
+    
+  }
+  
+  return status;
+}
+    1006:	df 91       	pop	r29
+    1008:	cf 91       	pop	r28
+    100a:	1f 91       	pop	r17
+    100c:	0f 91       	pop	r16
+    100e:	08 95       	ret
+
+00001010 <__tablejump2__>:
+    1010:	ee 0f       	add	r30, r30
+    1012:	ff 1f       	adc	r31, r31
+
+00001014 <__tablejump__>:
+    1014:	05 90       	lpm	r0, Z+
+    1016:	f4 91       	lpm	r31, Z
+    1018:	e0 2d       	mov	r30, r0
+    101a:	09 94       	ijmp
+
+0000101c <memcpy_P>:
+    101c:	fb 01       	movw	r30, r22
+    101e:	dc 01       	movw	r26, r24
+    1020:	02 c0       	rjmp	.+4      	; 0x1026 <memcpy_P+0xa>
+    1022:	05 90       	lpm	r0, Z+
+    1024:	0d 92       	st	X+, r0
+    1026:	41 50       	subi	r20, 0x01	; 1
+    1028:	50 40       	sbci	r21, 0x00	; 0
+    102a:	d8 f7       	brcc	.-10     	; 0x1022 <memcpy_P+0x6>
+    102c:	08 95       	ret
+
+0000102e <memcpy>:
+    102e:	fb 01       	movw	r30, r22
+    1030:	dc 01       	movw	r26, r24
+    1032:	02 c0       	rjmp	.+4      	; 0x1038 <memcpy+0xa>
+    1034:	01 90       	ld	r0, Z+
+    1036:	0d 92       	st	X+, r0
+    1038:	41 50       	subi	r20, 0x01	; 1
+    103a:	50 40       	sbci	r21, 0x00	; 0
+    103c:	d8 f7       	brcc	.-10     	; 0x1034 <memcpy+0x6>
+    103e:	08 95       	ret
+
+00001040 <_exit>:
+    1040:	f8 94       	cli
+
+00001042 <__stop_program>:
+    1042:	ff cf       	rjmp	.-2      	; 0x1042 <__stop_program>
